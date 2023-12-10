@@ -24,11 +24,10 @@ public class NodeParser : MonoBehaviour, IInitializer
             node.Initialize();
             if (node is StartNode temp)
             {
-                temp.Implement();
                 _graph.current = node;
+                temp.Implement();
             }
         }
-
         ParseNode(new NodeFinishedTextSignal());
     }
     private void ParseNode(NodeFinishedTextSignal signal)
@@ -38,6 +37,7 @@ public class NodeParser : MonoBehaviour, IInitializer
         {
             case StartNode temp:
                 NextNode(Constants.Output);
+                ParseNode(new NodeFinishedTextSignal());
                 break;
             case EndNode temp:
                 break;
@@ -48,10 +48,6 @@ public class NodeParser : MonoBehaviour, IInitializer
     }
     private void NextNode(string fieldName)
     {
-        if (_parser != null)
-        {
-            StopCoroutine(_parser);
-        }
         foreach (NodePort p in _graph.current.Ports)
         {
             if (p.fieldName == fieldName)
@@ -60,11 +56,11 @@ public class NodeParser : MonoBehaviour, IInitializer
                 break;
             }
         }
-        ParseNode(new NodeFinishedTextSignal());
     }
     private void OnNextNode(NextNodeSignal signal)
     {
         NextNode(Constants.Output);
+        ParseNode(new NodeFinishedTextSignal());
     }
     private void OnGameEnding(EndingGameSignal signal)
     {

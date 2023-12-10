@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour, IInitializer
     {
         _tempData = signal.data;
         _characterImage.sprite = signal.data.sprite;
+        _characterImage.SetNativeSize();
         _characterName.text = signal.data.name;
         _corTypeText = StartCoroutine(TypeText(signal.data.text));
     }
@@ -31,10 +32,11 @@ public class UIController : MonoBehaviour, IInitializer
         {
             StopCoroutine(_corTypeText);
             _characterText.text = _tempData.text;
+            _corTypeText = null;
         }
         else
         {
-            _bus.Invoke(new NodeFinishedTextSignal());
+            _bus.Invoke(new NextNodeSignal());
         }
     }
     private IEnumerator TypeText(string text)
@@ -51,5 +53,6 @@ public class UIController : MonoBehaviour, IInitializer
     {
         if (_bus == null) return;
         _bus.Unsubscribe<NodeParsedDataSignal>(OnNodeParsedData);
+        _bus.Unsubscribe<PlayerClickedSignal>(OnPlayerClicked);
     }
 }

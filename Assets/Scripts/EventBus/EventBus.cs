@@ -7,6 +7,7 @@ using UnityEngine;
 public class EventBus : IService
 {
     private Dictionary<string, List<CallbackWithPriority>> _signalCallbacks = new();
+    public EventBus() { }
     public void Subscribe<T>(Action<T> callback, int priority = 0)
     {
         string key = typeof(T).Name;

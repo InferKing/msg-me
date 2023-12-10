@@ -3,9 +3,17 @@ using UnityEngine;
 
 public class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private IInitializer[] _initializers;
+    [SerializeField] private List<MonoBehaviour> _monobehs;
     private ServiceLocator _locator;
     private EventBus _bus;
+    private List<IInitializer> _initializers = new();
+    private void OnValidate()
+    {
+        foreach (IInitializer pair in _monobehs)
+        {
+            _initializers.Add(pair);
+        }
+    }
     private void Awake()
     {
         ServiceLocator.Initialize();

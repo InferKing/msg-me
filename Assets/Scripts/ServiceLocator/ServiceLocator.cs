@@ -5,7 +5,7 @@ using UnityEngine;
 public class ServiceLocator
 {
     private readonly Dictionary<string, IService> _services = new();
-
+    private ServiceLocator() { }
     public static ServiceLocator Current { get; private set; }
 
     public static void Initialize()
