@@ -9,17 +9,33 @@ public class UIController : MonoBehaviour, IInitializer
     [SerializeField] private Image _characterImage;
     [SerializeField] private TMPro.TMP_Text _characterText, _characterName;
     private EventBus _bus;
+    private Coroutine _corTypeText;
+    private NodeData _tempData;
 
     public void Initialize()
     {
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<NodeParsedDataSignal>(OnNodeParsedData);
+        _bus.Subscribe<PlayerClickedSignal>(OnPlayerClicked);
     }
     private void OnNodeParsedData(NodeParsedDataSignal signal)
     {
+        _tempData = signal.data;
         _characterImage.sprite = signal.data.sprite;
         _characterName.text = signal.data.name;
-        StartCoroutine(TypeText(signal.data.text));
+        _corTypeText = StartCoroutine(TypeText(signal.data.text));
+    }
+    private void OnPlayerClicked(PlayerClickedSignal signal)
+    {
+        if (_corTypeText != null)
+        {
+            StopCoroutine(_corTypeText);
+            _characterText.text = _tempData.text;
+        }
+        else
+        {
+            _bus.Invoke(new NodeFinishedTextSignal());
+        }
     }
     private IEnumerator TypeText(string text)
     {

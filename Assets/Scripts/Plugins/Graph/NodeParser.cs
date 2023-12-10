@@ -14,7 +14,7 @@ public class NodeParser : MonoBehaviour, IInitializer
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<EndingGameSignal>(OnGameEnding);
         _bus.Subscribe<NextNodeSignal>(OnNextNode);
-        _bus.Subscribe<PlayerClickedSignal>(ParseNode);
+        _bus.Subscribe<NodeFinishedTextSignal>(ParseNode);
         ParseNodes();
     }
     private void ParseNodes()
@@ -29,9 +29,9 @@ public class NodeParser : MonoBehaviour, IInitializer
             }
         }
 
-        ParseNode(new PlayerClickedSignal());
+        ParseNode(new NodeFinishedTextSignal());
     }
-    private void ParseNode(PlayerClickedSignal signal)
+    private void ParseNode(NodeFinishedTextSignal signal)
     {
         BaseNode node = _graph.current;
         switch (node)
@@ -60,7 +60,7 @@ public class NodeParser : MonoBehaviour, IInitializer
                 break;
             }
         }
-        ParseNode(new PlayerClickedSignal());
+        ParseNode(new NodeFinishedTextSignal());
     }
     private void OnNextNode(NextNodeSignal signal)
     {
@@ -75,7 +75,6 @@ public class NodeParser : MonoBehaviour, IInitializer
         if (_bus == null) return;
         _bus.Unsubscribe<EndingGameSignal>(OnGameEnding);
         _bus.Unsubscribe<NextNodeSignal>(OnNextNode);
-        _bus.Unsubscribe<PlayerClickedSignal>(ParseNode);
-
+        _bus.Unsubscribe<NodeFinishedTextSignal>(ParseNode);
     }
 }
