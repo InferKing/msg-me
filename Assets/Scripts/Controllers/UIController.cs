@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +23,13 @@ public class UIController : MonoBehaviour, IInitializer
     }
     private IEnumerator TypeText(string text)
     {
-        
+        _characterText.text = "";
+        foreach (var item in text)
+        {
+            _characterText.text += item;
+            bool isPunctuation = Constants.punctutation.Contains(item);
+            yield return new WaitForSeconds(isPunctuation ? Constants.delayPunctuation : Constants.delayCharacter);
+        }
     }
     private void OnDisable()
     {
