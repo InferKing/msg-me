@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using XNode;
 
+[NodeWidth(304)]
 public class BaseNode : Node, IInitializer
 {
     protected EventBus _bus;

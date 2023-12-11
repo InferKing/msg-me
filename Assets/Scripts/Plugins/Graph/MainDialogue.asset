@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -24, y: 8}
+  position: {x: 88, y: -24}
   ports:
     keys:
     - input
@@ -46,10 +46,19 @@ MonoBehaviour:
   input: 0
   output: 0
   data:
-    name: Niggers
-    text: "\u042F \u0435\u0431\u0443 \u0441\u043E\u0431\u0430\u043A"
-    sprite: {fileID: 21300000, guid: 582b1f95c11ecfc428981235a1c40634, type: 3}
---- !u!114 &-2120309883253216240
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u041C\u044B \u0436\u0438\u0432\u0451\u043C \u0432 XXI \u0432\u0435\u043A\u0435
+      - \u0432\u0435\u043A\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0439
+      \u0438 \u0438\u043D\u043D\u043E\u0432\u0430\u0446\u0438\u0439. \u041D\u043E
+      \u0441\u043C\u043E\u0433\u0443\u0442 \u043B\u0438 \u043F\u043E\u043C\u043E\u0447\u044C
+      \u043E\u043D\u0438 \u0432 \u043E\u0431\u0440\u0435\u0442\u0435\u043D\u0438\u0438
+      \u043B\u044E\u0431\u0432\u0438?"
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &-5597072919231064628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,25 +67,233 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f910b8f1203f7468e1c4de6423798b, type: 3}
-  m_Name: End
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 248, y: -168}
+  position: {x: 1144, y: -24}
   ports:
     keys:
     - input
+    - output
     values:
     - _fieldName: input
-      _node: {fileID: -2120309883253216240}
+      _node: {fileID: -5597072919231064628}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: output
+        node: {fileID: 568982758806250423}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -5597072919231064628}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 1451910693819126639}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u042D\u0442\u043E \u0431\u044B\u043B\u043E \u0440\u0430\u043D\u043D\u0435\u0435
+      \u043C\u0430\u0439\u0441\u043A\u043E\u0435 \u0443\u0442\u0440\u043E, \u043A\u043E\u0433\u0434\u0430
+      \u0410\u043D\u044E\u0442\u0430 \u043E\u0442\u043A\u0440\u044B\u043B\u0430 \u0441\u0432\u043E\u0438
+      \u0433\u043B\u0430\u0437\u0430, \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C\u0441\u044F
+      \u043A \u043D\u0430\u043F\u0440\u044F\u0436\u0451\u043D\u043D\u043E\u043C\u0443
+      \u0443\u0447\u0435\u0431\u043D\u043E\u043C\u0443 \u0434\u043D\u044E."
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &-4145521515345508997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2200, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -4145521515345508997}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: -527485352161260217}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -4145521515345508997}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 1167887010296636336}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0417\u0430 \u043F\u043B\u0435\u0447\u0430\u043C\u0438 \u0443 \u043D\u0435\u0451
+      \u0431\u044B\u043B\u0430 \u043E\u043A\u043E\u043D\u0447\u0435\u043D\u043D\u0430\u044F
+      \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u0430\u044F \u0448\u043A\u043E\u043B\u0430
+      \u043F\u043E \u043A\u043B\u0430\u0441\u0441\u0443 \u0444\u043E\u0440\u0442\u0435\u043F\u044C\u044F\u043D\u043E,
+      \u0441 \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u043E\u043D\u0430 \u043F\u043E\u043F\u0440\u043E\u0449\u0430\u043B\u0430\u0441\u044C
+      \u0435\u0449\u0451 \u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u043C \u0433\u043E\u0434\u0443,
+      \u0430 \u0432\u043F\u0435\u0440\u0435\u0434\u0438 \u043F\u043E\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0435
+      \u0432 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u0435 \u0443\u0447\u0438\u043B\u0438\u0449\u0435."
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &-2992603343401508364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2904, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -2992603343401508364}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: 1167887010296636336}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -2992603343401508364}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 7892434954329641409}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0418\u043D\u043E\u0433\u0434\u0430 \u0435\u0439 \u043A\u0430\u0437\u0430\u043B\u043E\u0441\u044C,
+      \u0447\u0442\u043E \u0440\u043E\u0434\u0438\u043B\u0430\u0441\u044C \u043E\u043D\u0430
+      \u043D\u0435 \u0432 \u0442\u043E\u043C \u0441\u0442\u043E\u043B\u0435\u0442\u0438\u0438,
+      \u0432\u0435\u0434\u044C \u0432\u043C\u0435\u0441\u0442\u043E \u0432\u0441\u0435\u043C\u0438
+      \u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043F\u043E\u043F\u0441\u044B \u043E\u043D\u0430
+      \u0432\u0441\u0435\u0433\u0434\u0430 \u0432\u044B\u0431\u0438\u0440\u0430\u043B\u0430
+      \u0411\u0435\u0442\u0445\u043E\u0432\u0435\u043D\u0430, \u0428\u0442\u0440\u0430\u0443\u0441\u0430,
+      \u0412\u0438\u0432\u0430\u043B\u044C\u0434\u0438 \u0438 \u0435\u0449\u0451
+      \u043C\u043D\u043E\u0433\u043E \u0434\u0440\u0443\u0433\u0438\u0445 \u043A\u043E\u043C\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u043E\u0432,
+      \u0442\u0430\u043A \u0431\u043B\u0438\u0437\u043A\u0438\u0445 \u0435\u0451
+      \u044E\u043D\u043E\u043C\u0443 \u0441\u0435\u0440\u0434\u0435\u0447\u043A\u0443."
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &-527485352161260217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1848, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -527485352161260217}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: 1451910693819126639}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -527485352161260217}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -4145521515345508997}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0421\u043A\u0430\u0437\u0430\u043B\u0430 \u0434\u0435\u0432\u0443\u0448\u043A\u0430,
+      \u0438 \u0441\u043B\u0430\u0434\u0435\u043D\u044C\u043A\u043E \u043F\u043E\u0442\u044F\u043D\u0443\u043B\u0430\u0441\u044C
+      \u0432 \u0441\u0432\u043E\u0435\u0439 \u043A\u0440\u043E\u0432\u0430\u0442\u0438."
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}
 --- !u!114 &-22476928935521431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +307,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -328, y: -8}
+  position: {x: -280, y: -24}
   ports:
     keys:
     - input
@@ -123,9 +340,15 @@ MonoBehaviour:
   input: 0
   output: 0
   data:
-    name: Danya
-    text: Wtf happened there? Wtf happened there?Wtf happened there?
-    sprite: {fileID: 21300000, guid: 1a04c87b1d41f1c4c8d4d748a682fef9, type: 3}
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0412\u044B \u043A\u043E\u0433\u0434\u0430-\u043D\u0438\u0431\u0443\u0434\u044C
+      \u0432\u0435\u0440\u0438\u043B\u0438 \u0432 \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E\u0441\u0442\u044C
+      \u0432\u0441\u0442\u0440\u0435\u0447\u0438?"
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +365,18 @@ MonoBehaviour:
   - {fileID: -22476928935521431}
   - {fileID: 6552242064575126391}
   - {fileID: -6156629151202760829}
-  - {fileID: -2120309883253216240}
   - {fileID: 526577182592542196}
   - {fileID: 568982758806250423}
-  current: {fileID: 568982758806250423}
+  - {fileID: -5597072919231064628}
+  - {fileID: 1451910693819126639}
+  - {fileID: -527485352161260217}
+  - {fileID: -4145521515345508997}
+  - {fileID: 1167887010296636336}
+  - {fileID: -2992603343401508364}
+  - {fileID: 7892434954329641409}
+  - {fileID: 4177837994448604612}
+  - {fileID: 5148889459571564309}
+  current: {fileID: 4177837994448604612}
 --- !u!114 &526577182592542196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +390,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 280, y: 168}
+  position: {x: 440, y: -24}
   ports:
     keys:
     - input
@@ -192,9 +423,21 @@ MonoBehaviour:
   input: 0
   output: 0
   data:
-    name: Danya
-    text: Wtf happened there? Wtf happened there?Wtf happened there?
-    sprite: {fileID: 21300000, guid: a8acb2928bbe6264092cba9d3429ab08, type: 3}
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u041A\u043E\u0433\u0434\u0430 \u0442\u044B \u0442\u0430\u043A \u044E\u043D
+      \u0438 \u043D\u0435\u043E\u043F\u044B\u0442\u0435\u043D, \u0447\u0430\u0441\u0442\u043E
+      \u0438\u0434\u0435\u0430\u043B\u0438\u0437\u0438\u0440\u0443\u0435\u0448\u044C
+      \u0438\u043B\u0438 \u0434\u0435\u043C\u043E\u043D\u0438\u0437\u0438\u0440\u0443\u0435\u0448\u044C
+      \u043E\u043A\u0440\u0443\u0436\u0430\u044E\u0449\u0438\u0445 \u0442\u0435\u0431\u0435
+      \u043B\u044E\u0434\u0435\u0439: \u0431\u0443\u0434\u044C \u0442\u043E \u0442\u0432\u043E\u0438
+      \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0438, \u0431\u043B\u0438\u0437\u043A\u0438\u0435
+      \u0434\u0440\u0443\u0437\u044C\u044F \u0438\u043B\u0438 \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E
+      \u0447\u0443\u0436\u0438\u0435 \u043B\u044E\u0434\u0438."
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
 --- !u!114 &568982758806250423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +451,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 520, y: 264}
+  position: {x: 792, y: -24}
   ports:
     keys:
     - input
@@ -230,6 +473,177 @@ MonoBehaviour:
       _node: {fileID: 568982758806250423}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -5597072919231064628}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u041D\u043E \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0442\u044C,
+      \u0435\u0441\u043B\u0438 \u0442\u044B \u0432\u043E\u0437\u0432\u044B\u0441\u0438\u043B
+      \u0432 \u0441\u0432\u043E\u0438\u0445 \u0433\u043B\u0430\u0437\u0430\u0445
+      \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430, \u043F\u0440\u0435\u0442\u0435\u043D\u0434\u0443\u044E\u0449\u0435\u0433\u043E
+      \u043D\u0430 \u0442\u0432\u043E\u0451 \u0441\u0435\u0440\u0434\u0446\u0435,
+      \u0430 \u043F\u043E\u0442\u043E\u043C, \u043F\u043E\u043D\u044F\u043B, \u0447\u0442\u043E
+      \u043E\u043D \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E \u043D\u0435
+      \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u0442
+      \u0442\u0432\u043E\u0438\u043C \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u0438\u044F\u043C?"
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &1167887010296636336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2552, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 1167887010296636336}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: -4145521515345508997}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1167887010296636336}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -2992603343401508364}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0414\u0435\u0432\u0443\u0448\u043A\u0430 \u0431\u0440\u0435\u0434\u0438\u043B\u0430
+      \u043C\u0443\u0437\u044B\u043A\u043E\u0439: \u0435\u0451 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043E\u0432\u0430\u043B\u043E
+      \u0432\u0441\u0451, \u0447\u0442\u043E \u0441\u0432\u044F\u0437\u0430\u043D\u043E
+      \u0441 \u0435\u0451 \u043B\u044E\u0431\u0438\u043C\u043E\u0439 \u043A\u043B\u0430\u0441\u0441\u0438\u043A\u043E\u0439. "
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &1451910693819126639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1496, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 1451910693819126639}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: -5597072919231064628}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 1451910693819126639}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -527485352161260217}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: "\u0410\u043D\u044E\u0442\u0430"
+      character: 0
+    text: "\u041E\u0445, \u043D\u0443 \u0438 \u0434\u0435\u043D\u0451\u043A \u0432\u043F\u0435\u0440\u0435\u0434\u0438
+      \u043C\u0435\u043D\u044F \u043E\u0436\u0438\u0434\u0430\u0435\u0442"
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &4177837994448604612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3608, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 4177837994448604612}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: 7892434954329641409}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 4177837994448604612}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -238,9 +652,59 @@ MonoBehaviour:
   input: 0
   output: 0
   data:
-    name: Niggers
-    text: "\u042F \u0435\u0431\u0443 \u0441\u043E\u0431\u0430\u043A"
-    sprite: {fileID: 21300000, guid: 1a04c87b1d41f1c4c8d4d748a682fef9, type: 3}
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0414\u0435\u0432\u0443\u0448\u043A\u0430 \u0434\u0430\u0436\u0435 \u0440\u0430\u0441\u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u043B\u0430
+      \u043F\u0435\u0440\u0435\u0435\u0437\u0434 \u0432 \u043E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435
+      \u043F\u0440\u0438 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u043E\u043C
+      \u0443\u0447\u0438\u043B\u0438\u0449\u0435, \u043B\u0438\u0448\u044C \u0431\u044B
+      \u043E\u0431\u0440\u0435\u0441\u0442\u0438 \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u044C
+      \u0438 \u0443\u0431\u0435\u0436\u0430\u0442\u044C \u043E\u0442 \u0434\u0435\u0441\u043F\u043E\u0442\u0438\u0447\u043D\u044B\u0445
+      \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439."
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+--- !u!114 &5148889459571564309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296f4921bb32347469107c09608d7095, type: 3}
+  m_Name: Choosing Path
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3992, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 5148889459571564309}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 5148889459571564309}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  _condition: 
 --- !u!114 &6552242064575126391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +736,64 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   output: 0
+--- !u!114 &7892434954329641409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 3256, y: -24}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 7892434954329641409}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: -2992603343401508364}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 7892434954329641409}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 4177837994448604612}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u0412 \u043C\u0443\u0437\u044B\u043A\u0435 \u043E\u043D\u0430 \u0438\u0441\u043A\u0430\u043B\u0430
+      \u0443\u0442\u0435\u0448\u0435\u043D\u0438\u0435: \u0432 \u0441\u0435\u043C\u044C\u0435
+      \u0441 \u0440\u0430\u043D\u043D\u0438\u0445 \u043B\u0435\u0442 \u0431\u044B\u043B\u0438
+      \u0441\u043A\u0430\u043D\u0434\u0430\u043B\u044B, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438\u0441\u044C \u0438
+      \u0434\u043E \u0441\u0438\u0445 \u043F\u043E\u0440. \u041F\u0430\u043F\u0430
+      \u0442\u0440\u0435\u0431\u043E\u0432\u0430\u043B \u0438\u0434\u0435\u0430\u043B\u044C\u043D\u044B\u0445
+      \u043E\u0446\u0435\u043D\u043E\u043A. \u0410 \u043C\u0430\u043C\u0430 \u2013
+      \u0432\u0441\u0435\u0446\u0435\u043B\u043E\u0433\u043E \u043F\u043E\u0432\u0438\u043D\u043E\u0432\u0435\u043D\u0438\u044F."
+    sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    music: {fileID: 0}
+    fx: {fileID: 0}

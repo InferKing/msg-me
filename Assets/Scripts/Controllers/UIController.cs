@@ -21,9 +21,14 @@ public class UIController : MonoBehaviour, IInitializer
     private void OnNodeParsedData(NodeParsedDataSignal signal)
     {
         _tempData = signal.data;
+        _characterImage.color = signal.data.sprite != null ? Color.white : Color.clear;
         _characterImage.sprite = signal.data.sprite;
         _characterImage.SetNativeSize();
-        _characterName.text = signal.data.name;
+        _characterName.text = signal.data.characterInfo.name;
+        _characterName.color = Constants.characterColors.GetValueOrDefault(
+            signal.data.characterInfo.character, 
+            Color.white
+        );
         _corTypeText = StartCoroutine(TypeText(signal.data.text));
     }
     private void OnPlayerClicked(PlayerClickedSignal signal)
@@ -48,6 +53,7 @@ public class UIController : MonoBehaviour, IInitializer
             bool isPunctuation = Constants.punctutation.Contains(item);
             yield return new WaitForSeconds(isPunctuation ? Constants.delayPunctuation : Constants.delayCharacter);
         }
+        _corTypeText = null;
     }
     private void OnDisable()
     {
