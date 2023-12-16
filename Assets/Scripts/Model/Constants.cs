@@ -8,7 +8,10 @@ public class Constants
     public static readonly string Output = "output";
     public static readonly string Input = "input";
     public static readonly float delayPunctuation = 0.06f;
-    public static readonly float delayCharacter = 0.025f;
+    public static readonly float delayLetter = 0.025f;
+    public static readonly string developerName = "1nfer.exe";
+    public static readonly string adText = "Благодаря рекламе разработчику будет чем накормить котика!";
+    public static readonly string adCountdown = "Реклама через {0}";
     public static readonly Dictionary<Character, Color> characterColors = new()
     {
         { Character.Anya, ColorUtility.TryParseHtmlString("#F2FF66", out _color) ? _color : Color.white },
@@ -19,6 +22,7 @@ public class Constants
         { Character.Slave, ColorUtility.TryParseHtmlString("#914949", out _color) ? _color : Color.white },
         { Character.Teacher, ColorUtility.TryParseHtmlString("#9AB0DA", out _color) ? _color : Color.white },
         { Character.Chairperson, ColorUtility.TryParseHtmlString("#E2E2E2", out _color) ? _color : Color.white },
-        { Character.StoryTeller, ColorUtility.TryParseHtmlString("#E2E2E2", out _color) ? _color : Color.white }
+        { Character.StoryTeller, ColorUtility.TryParseHtmlString("#E2E2E2", out _color) ? _color : Color.white },
+        { Character.Developer, ColorUtility.TryParseHtmlString("#486DCC", out _color) ? _color : Color.white }
     };
 }

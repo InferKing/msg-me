@@ -8,7 +8,6 @@ public class NodeParser : MonoBehaviour, IInitializer
 {
     [SerializeField] private DialogueGraph _graph;
     private EventBus _bus;
-    private Coroutine _parser;
     public void Initialize()
     {
         _bus = ServiceLocator.Current.Get<EventBus>();
@@ -16,6 +15,7 @@ public class NodeParser : MonoBehaviour, IInitializer
         _bus.Subscribe<NextNodeSignal>(OnNextNode);
         _bus.Subscribe<NodeFinishedTextSignal>(ParseNode);
         _bus.Subscribe<ChoosingPathParsedSignal>(OnChoosingPathParsed);
+        _bus.Subscribe<AfterShowAdSignal>(OnAfterShowAd);
         ParseNodes();
     }
     private void ParseNodes()
@@ -47,6 +47,9 @@ public class NodeParser : MonoBehaviour, IInitializer
                 break;
             case ChoosingPathNode temp:
                 temp.StartParseCondition();
+                break;
+            case AdNode temp:
+                _bus.Invoke(new BeforeShowAdSignal());
                 break;
         }
     }
@@ -95,6 +98,10 @@ public class NodeParser : MonoBehaviour, IInitializer
         NextNode(Constants.Output, signal.data);
         ParseNode(new NodeFinishedTextSignal());
     }
+    private void OnAfterShowAd(AfterShowAdSignal signal)
+    {
+        OnNextNode(new NextNodeSignal());
+    }
     private void OnGameEnding(EndingGameSignal signal)
     {
 
@@ -106,5 +113,6 @@ public class NodeParser : MonoBehaviour, IInitializer
         _bus.Unsubscribe<NextNodeSignal>(OnNextNode);
         _bus.Unsubscribe<NodeFinishedTextSignal>(ParseNode);
         _bus.Unsubscribe<ChoosingPathParsedSignal>(OnChoosingPathParsed);
+        _bus.Unsubscribe<AfterShowAdSignal>(OnAfterShowAd);
     }
 }

@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour, IInitializer
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<NodeParsedDataSignal>(OnNodeParsedData);
         _bus.Subscribe<PlayerClickedSignal>(OnPlayerClicked);
+        _bus.Subscribe<BeforeShowAdSignal>(OnBeforeShowAd);
     }
     private void OnNodeParsedData(NodeParsedDataSignal signal)
     {
@@ -44,6 +45,15 @@ public class UIController : MonoBehaviour, IInitializer
             _bus.Invoke(new NextNodeSignal());
         }
     }
+    private void OnBeforeShowAd(BeforeShowAdSignal signal)
+    {
+        NodeData data = new();
+        data.text = Constants.adText;
+        data.characterInfo = new CharacterInfo();
+        data.characterInfo.name = Constants.developerName;
+        data.characterInfo.character = Character.Developer;
+        OnNodeParsedData(new NodeParsedDataSignal(data));
+    }
     private IEnumerator TypeText(string text)
     {
         _characterText.text = "";
@@ -51,7 +61,7 @@ public class UIController : MonoBehaviour, IInitializer
         {
             _characterText.text += item;
             bool isPunctuation = Constants.punctutation.Contains(item);
-            yield return new WaitForSeconds(isPunctuation ? Constants.delayPunctuation : Constants.delayCharacter);
+            yield return new WaitForSeconds(isPunctuation ? Constants.delayPunctuation : Constants.delayLetter);
         }
         _corTypeText = null;
     }
@@ -60,5 +70,6 @@ public class UIController : MonoBehaviour, IInitializer
         if (_bus == null) return;
         _bus.Unsubscribe<NodeParsedDataSignal>(OnNodeParsedData);
         _bus.Unsubscribe<PlayerClickedSignal>(OnPlayerClicked);
+        _bus.Unsubscribe<BeforeShowAdSignal>(OnBeforeShowAd);
     }
 }

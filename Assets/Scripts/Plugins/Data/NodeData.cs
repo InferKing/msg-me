@@ -10,7 +10,8 @@ public enum Character
     Slave,
     Teacher,
     Chairperson,
-    StoryTeller
+    StoryTeller,
+    Developer
 }
 
 [System.Serializable]
