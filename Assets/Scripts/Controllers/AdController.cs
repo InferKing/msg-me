@@ -12,7 +12,11 @@ public class AdController : MonoBehaviour, IInitializer
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<StartShowAdSignal>(OnStartShowAd);
     }
-    public void AdClosed() => _bus.Invoke(new AfterShowAdSignal());
+    public void AdClosed() 
+    {
+        _bus.Invoke(new PlayerInteractSignal(true));
+        _bus.Invoke(new AfterShowAdSignal()); 
+    }
     private void OnStartShowAd(StartShowAdSignal signal)
     {
         if (_isVideo)

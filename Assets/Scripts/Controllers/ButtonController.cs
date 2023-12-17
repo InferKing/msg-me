@@ -6,6 +6,7 @@ using YG;
 
 public class ButtonController : MonoBehaviour, IInitializer
 {
+    [SerializeField] private AudioSource _src;
     [SerializeField] private Button[] _buttons;
     private Dictionary<Button, PathNodeData> _dataButtons;
     private EventBus _bus;
@@ -25,22 +26,19 @@ public class ButtonController : MonoBehaviour, IInitializer
         _dataButtons = new Dictionary<Button, PathNodeData>();
         for (int i = 0; i < signal.data.Count; i++)
         {
-            _buttons[i].gameObject.SetActive(true);
-            _buttons[i].GetComponent<TMPro.TMP_Text>().text = signal.data[i].text;
+            _buttons[i].GetComponentInChildren<TMPro.TMP_Text>().text = signal.data[i].text;
             _dataButtons.Add(_buttons[i], signal.data[i]);
         }
+        StartCoroutine(ToggleButtons(true));
     }
     private void OnHidePathButtons(HidePathButtonsSignal signal)
     {
-        _dataButtons.Clear();
-        foreach (var button in _buttons)
-        {
-            button.gameObject.SetActive(false);
-        }
+        StartCoroutine(ToggleButtons(false));
         _bus.Invoke(new NextNodeSignal());
     }
     public void ClickedButton(Button button)
     {
+        _src.Play();
         if (!_dataButtons.TryGetValue(button, out PathNodeData result))
         {
             Debug.LogWarning("An unknown button was passed as an argument");
@@ -57,9 +55,20 @@ public class ButtonController : MonoBehaviour, IInitializer
             case Character.Teacher: 
                 YandexGame.savesData.teacherCount += result.value;
                 break;
+            default:
+                Debug.LogWarning($"Character {result.chr} is not used to change the ending");
+                break;
         }
         YandexGame.SaveProgress();
         _bus.Invoke(new HidePathButtonsSignal());
+    }
+    private IEnumerator ToggleButtons(bool toggle)
+    {
+        foreach (var button in _dataButtons.Keys)
+        {
+            button.GetComponent<Animator>().SetBool(Constants.pathBtnAnimatorParameter, toggle);
+            yield return new WaitForSeconds(Constants.delayBtnAnimation);
+        }
     }
     private void OnDisable()
     {

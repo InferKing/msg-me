@@ -49,7 +49,14 @@ public class NodeParser : MonoBehaviour, IInitializer
                 temp.StartParseCondition();
                 break;
             case AdNode temp:
+                _bus.Invoke(new PlayerInteractSignal(false));
                 _bus.Invoke(new BeforeShowAdSignal());
+                break;
+            case PathNode temp:
+                _bus.Invoke(new ShowPathButtonsSignal(temp.path));
+                break;
+            case ChangeSceneNode temp:
+                _bus.Invoke(new StartChangeSceneSignal(temp.scene));
                 break;
         }
     }

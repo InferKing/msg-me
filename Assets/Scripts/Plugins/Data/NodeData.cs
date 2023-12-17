@@ -21,4 +21,5 @@ public class NodeData
     public string text;
     public Sprite sprite;
     public AudioClip music, fx;
+    public bool isNextPath = false;
 }

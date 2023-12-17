@@ -12,6 +12,9 @@ public class Constants
     public static readonly string developerName = "1nfer.exe";
     public static readonly string adText = "Благодаря рекламе разработчику будет чем накормить котика!";
     public static readonly string adCountdown = "Реклама через {0}";
+    public static readonly string pathBtnAnimatorParameter = "Show";
+    public static readonly string transitionAnimatorParameter = "Transition";
+    public static readonly float delayBtnAnimation = 0.2f;
     public static readonly Dictionary<Character, Color> characterColors = new()
     {
         { Character.Anya, ColorUtility.TryParseHtmlString("#F2FF66", out _color) ? _color : Color.white },

@@ -6,7 +6,7 @@ public class PathNode : BaseNode, INodeRealizer
 {
     [Input] public int input;
     [Output] public int output;
-    public List<PathNodeData> data;
+    public List<PathNodeData> path;
     public void Implement()
     {
         
