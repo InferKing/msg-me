@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class UIController : MonoBehaviour, IInitializer
     private EventBus _bus;
     private Coroutine _corTypeText;
     private NodeData _tempData;
-    private float _tempColorAlpha;
+    private float _tempColorAlpha = 1;
     public void Initialize()
     {
         _bus = ServiceLocator.Current.Get<EventBus>();
@@ -24,9 +25,21 @@ public class UIController : MonoBehaviour, IInitializer
     private void OnNodeParsedData(NodeParsedDataSignal signal)
     {
         _tempData = signal.data;
-        _characterImage.color = _tempData.sprite != null ? Color.white : Color.clear;
-        _characterImage.sprite = _tempData.sprite;
-        _characterImage.SetNativeSize();
+        // _characterImage.color = _tempData.sprite != null ? Color.white : Color.clear;
+        if (_tempData.sprite == null && _characterImage.sprite != null)
+        {
+            StartCoroutine(FadeOut(_characterImage, 0.035f, true));
+        }
+        else if (_tempData.sprite != null && _characterImage.sprite == null) 
+        {
+            _characterImage.sprite = _tempData.sprite;
+            StartCoroutine(FadeIn(_characterImage, 0.035f, true));
+        }
+        else
+        {
+            _characterImage.sprite = _tempData.sprite;
+            _characterImage.SetNativeSize();
+        }
         _characterName.text = _tempData.characterInfo.name;
         _characterName.color = Constants.characterColors.GetValueOrDefault(
             _tempData.characterInfo.character, 
@@ -58,11 +71,13 @@ public class UIController : MonoBehaviour, IInitializer
     }
     private void OnStartChangeScene(StartChangeSceneSignal signal)
     {
-        StartCoroutine(FadeOut());
+        _characterText.text = "";
+        _characterName.text = "";
+        StartCoroutine(FadeOut(_panel));
     }
     private void OnFinishChangeScene(FinishChangeSceneSignal signal)
     {
-        StartCoroutine(FadeIn());
+        StartCoroutine(FadeIn(_panel));
     } 
     private IEnumerator TypeText(string text)
     {
@@ -79,24 +94,30 @@ public class UIController : MonoBehaviour, IInitializer
         }
         _corTypeText = null;
     }
-    private IEnumerator FadeOut()
+    private IEnumerator FadeOut(Image img, float speed = 0.02f, bool isNative = false)
     {
-        _tempColorAlpha = _panel.color.a;
-        for (float i = _panel.color.a; i > 0; i -= Time.deltaTime)
+        if (isNative) { img.SetNativeSize(); }
+        _tempColorAlpha = img.color.a;
+        for (float i = img.color.a; i > 0; i -= speed)
         {
             yield return new WaitForSeconds(Time.deltaTime);
-            _panel.color = new Color(_panel.color.r, _panel.color.g, _panel.color.b, Mathf.Clamp(i, 0, 1));
+            img.color = new Color(img.color.r, img.color.g, img.color.b, Mathf.Clamp(i, 0, 1));
         }
-        _panel.color = new Color(_panel.color.r, _panel.color.g, _panel.color.b, 0);
+        img.color = new Color(img.color.r, img.color.g, img.color.b, 0);
+        if (isNative)
+        {
+            img.sprite = null;
+        }
     }
-    private IEnumerator FadeIn()
+    private IEnumerator FadeIn(Image img, float speed = 0.02f, bool isNative = false)
     {
-        for (float i = 0; i < _tempColorAlpha; i += Time.deltaTime)
+        if (isNative) { img.SetNativeSize(); }
+        for (float i = 0; i < _tempColorAlpha; i += speed)
         {
             yield return new WaitForSeconds(Time.deltaTime);
-            _panel.color = new Color(_panel.color.r, _panel.color.g, _panel.color.b, Mathf.Clamp(i, 0, 1));
+            img.color = new Color(img.color.r, img.color.g, img.color.b, Mathf.Clamp(i, 0, 1));
         }
-        _panel.color = new Color(_panel.color.r, _panel.color.g, _panel.color.b, _tempColorAlpha);
+        img.color = new Color(img.color.r, img.color.g, img.color.b, _tempColorAlpha);
     }
     private void OnDisable()
     {

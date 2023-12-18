@@ -56,6 +56,7 @@ public class NodeParser : MonoBehaviour, IInitializer
                 _bus.Invoke(new ShowPathButtonsSignal(temp.path));
                 break;
             case ChangeSceneNode temp:
+                _bus.Invoke(new PlayerInteractSignal(false));
                 _bus.Invoke(new StartChangeSceneSignal(temp.scene));
                 break;
         }
