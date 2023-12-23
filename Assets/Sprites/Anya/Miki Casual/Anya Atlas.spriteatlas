@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Anya Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+    - {fileID: 2800000, guid: 4c031fa6d4e70b44284d4174e0ffe8d0, type: 3}
+    - {fileID: 2800000, guid: 32125827941590d46abe82ad64fc8a21, type: 3}
+    - {fileID: 2800000, guid: 171566d4d7006ba469ae3225072c047c, type: 3}
+    - {fileID: 2800000, guid: d68bba88d2c83cb4ebe792f70bdd5f40, type: 3}
+    - {fileID: 2800000, guid: 225acbf44ecdc954d9a941c9c3537d38, type: 3}
+    - {fileID: 2800000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
+    - {fileID: 2800000, guid: 26fd4db9baea960418a4b4b440f220b5, type: 3}
+    - {fileID: 2800000, guid: f4ee7387d5a8ff546910b07c1d2011f9, type: 3}
+    - {fileID: 2800000, guid: c40c5ef74054f6f4fb8639dfa9c31f26, type: 3}
+    - {fileID: 2800000, guid: 8a453c9e8d5db314a8550598cd7d93dd, type: 3}
+    - {fileID: 2800000, guid: aaa3eca6691390b42b2dace1ec162ba2, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
+  - {fileID: 21300000, guid: 171566d4d7006ba469ae3225072c047c, type: 3}
+  - {fileID: 21300000, guid: 225acbf44ecdc954d9a941c9c3537d38, type: 3}
+  - {fileID: 21300000, guid: aaa3eca6691390b42b2dace1ec162ba2, type: 3}
+  - {fileID: 21300000, guid: 4c031fa6d4e70b44284d4174e0ffe8d0, type: 3}
+  - {fileID: 21300000, guid: 32125827941590d46abe82ad64fc8a21, type: 3}
+  - {fileID: 21300000, guid: f4ee7387d5a8ff546910b07c1d2011f9, type: 3}
+  - {fileID: 21300000, guid: c40c5ef74054f6f4fb8639dfa9c31f26, type: 3}
+  - {fileID: 21300000, guid: d68bba88d2c83cb4ebe792f70bdd5f40, type: 3}
+  - {fileID: 21300000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
+  - {fileID: 21300000, guid: 26fd4db9baea960418a4b4b440f220b5, type: 3}
+  - {fileID: 21300000, guid: 8a453c9e8d5db314a8550598cd7d93dd, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Miki_A_Casual_Closed_Frown
+  - Miki_A_Casual_Closed_Open_Blush
+  - Miki_A_Casual_Closed_Smile_Blush
+  - Miki_A_Casual_Smile_Blush
+  - Miki_A_Casual_Closed_Frown_Blush
+  - Miki_A_Casual_Closed_Open
+  - Miki_A_Casual_Open
+  - Miki_A_Casual_Open_Blush
+  - Miki_A_Casual_Closed_Smile
+  - Miki_A_Casual_Frown
+  - Miki_A_Casual_Frown_Blush
+  - Miki_A_Casual_Smile
+  m_RenderDataMap: {}
+  m_Tag: Anya Atlas
+  m_IsVariant: 0

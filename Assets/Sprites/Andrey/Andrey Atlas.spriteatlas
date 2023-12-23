@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Andrey Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 26855d0b0ca3983479d49e7f6209671d, type: 3}
+    - {fileID: 2800000, guid: 2733e4727d1a666489333d6fa4d2608b, type: 3}
+    - {fileID: 2800000, guid: 55635c5775c0c1444ad499c4b063b74b, type: 3}
+    - {fileID: 2800000, guid: a5173751159d9284588c08a3e096528c, type: 3}
+    - {fileID: 2800000, guid: 23085b6953bd02d4b8a7796019caadb3, type: 3}
+    - {fileID: 2800000, guid: 4216600d2d74efb4b9d5be1181dbc61d, type: 3}
+    - {fileID: 2800000, guid: b4179ff89fc3cad4f8c81ec35e91b4d5, type: 3}
+    - {fileID: 2800000, guid: b35085fa52b73034cb11280d4ac94acb, type: 3}
+    - {fileID: 2800000, guid: 14c036b8071dc87458a6204b217b9b3d, type: 3}
+    - {fileID: 2800000, guid: f20a4f2a63b8ab94a9f2c9de55665698, type: 3}
+    - {fileID: 2800000, guid: 4f5fcf80c4b62584c8e8ef094d21e524, type: 3}
+    - {fileID: 2800000, guid: 1cc6df80da97c8a48ab741baa1a6a55a, type: 3}
+    - {fileID: 2800000, guid: d67867131dfc1be49a4f70530ab05c95, type: 3}
+    - {fileID: 2800000, guid: f5d5c3f5e74280849ad938ef3341508c, type: 3}
+    - {fileID: 2800000, guid: 686b5b2a8bb577f409e66961579ccf2d, type: 3}
+    - {fileID: 2800000, guid: 48fa88f77f44ad844a1baae3bbaec46b, type: 3}
+    - {fileID: 2800000, guid: 2cc73d1d7884002458cc54de777e4ed4, type: 3}
+    - {fileID: 2800000, guid: a33a8d6316882f640af53a715f69c7e7, type: 3}
+    - {fileID: 2800000, guid: f5b031661418a834e8cb34f97d013e04, type: 3}
+    - {fileID: 2800000, guid: 3da3eba2e9f2dd1448d13ea1a42473e3, type: 3}
+    - {fileID: 2800000, guid: 70ee018caf062f84d8bef11099f36c99, type: 3}
+    - {fileID: 2800000, guid: 3bd1bf973a7e8844c9a26fb609b49ab9, type: 3}
+    - {fileID: 2800000, guid: fc80c0f4aa9f0784790a17f6291ce5f7, type: 3}
+    - {fileID: 2800000, guid: c8b2b5b3959720c4c8d808d7e23e8f66, type: 3}
+    - {fileID: 2800000, guid: 99d3481dc5353074e93c2374baee6971, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4f5fcf80c4b62584c8e8ef094d21e524, type: 3}
+  - {fileID: 21300000, guid: 1cc6df80da97c8a48ab741baa1a6a55a, type: 3}
+  - {fileID: 21300000, guid: a5173751159d9284588c08a3e096528c, type: 3}
+  - {fileID: 21300000, guid: 2733e4727d1a666489333d6fa4d2608b, type: 3}
+  - {fileID: 21300000, guid: 3da3eba2e9f2dd1448d13ea1a42473e3, type: 3}
+  - {fileID: 21300000, guid: d67867131dfc1be49a4f70530ab05c95, type: 3}
+  - {fileID: 21300000, guid: a33a8d6316882f640af53a715f69c7e7, type: 3}
+  - {fileID: 21300000, guid: c8b2b5b3959720c4c8d808d7e23e8f66, type: 3}
+  - {fileID: 21300000, guid: fc80c0f4aa9f0784790a17f6291ce5f7, type: 3}
+  - {fileID: 21300000, guid: f5d5c3f5e74280849ad938ef3341508c, type: 3}
+  - {fileID: 21300000, guid: f5b031661418a834e8cb34f97d013e04, type: 3}
+  - {fileID: 21300000, guid: 55635c5775c0c1444ad499c4b063b74b, type: 3}
+  - {fileID: 21300000, guid: 3bd1bf973a7e8844c9a26fb609b49ab9, type: 3}
+  - {fileID: 21300000, guid: 48fa88f77f44ad844a1baae3bbaec46b, type: 3}
+  - {fileID: 21300000, guid: 14c036b8071dc87458a6204b217b9b3d, type: 3}
+  - {fileID: 21300000, guid: b4179ff89fc3cad4f8c81ec35e91b4d5, type: 3}
+  - {fileID: 21300000, guid: 23085b6953bd02d4b8a7796019caadb3, type: 3}
+  - {fileID: 21300000, guid: 686b5b2a8bb577f409e66961579ccf2d, type: 3}
+  - {fileID: 21300000, guid: f20a4f2a63b8ab94a9f2c9de55665698, type: 3}
+  - {fileID: 21300000, guid: b35085fa52b73034cb11280d4ac94acb, type: 3}
+  - {fileID: 21300000, guid: 26855d0b0ca3983479d49e7f6209671d, type: 3}
+  - {fileID: 21300000, guid: 70ee018caf062f84d8bef11099f36c99, type: 3}
+  - {fileID: 21300000, guid: 4216600d2d74efb4b9d5be1181dbc61d, type: 3}
+  - {fileID: 21300000, guid: 99d3481dc5353074e93c2374baee6971, type: 3}
+  - {fileID: 21300000, guid: 2cc73d1d7884002458cc54de777e4ed4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Takahiro_uniform2_emo_6
+  - Takahiro_uniform2_emo_7
+  - Takahiro_causual_emo_3
+  - Takahiro_causual_emo_1
+  - Takahiro_uniform_emo_5
+  - Takahiro_uniform2_emo_9
+  - Takahiro_uniform_emo_3
+  - Takahiro_uniform_emo_10
+  - Takahiro_uniform_emo_9
+  - Takahiro_uniform2_emo_10
+  - Takahiro_uniform_emo_4
+  - Takahiro_causual_emo_2
+  - Takahiro_uniform_emo_7
+  - Takahiro_uniform_emo_1
+  - Takahiro_causual_emo_9
+  - Takahiro_causual_emo_6
+  - Takahiro_causual_emo_4
+  - Takahiro_uniform_emo_0
+  - Takahiro_causual_emo_10
+  - Takahiro_causual_emo_7
+  - Takahiro_causual_emo_0
+  - Takahiro_uniform_emo_6
+  - Takahiro_causual_emo_5
+  - who-is-andrey
+  - Takahiro_uniform_emo_2
+  m_RenderDataMap: {}
+  m_Tag: Andrey Atlas
+  m_IsVariant: 0

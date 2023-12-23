@@ -1,7 +1,6 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-
 using XNode;
 
 public class NodeParser : MonoBehaviour, IInitializer
@@ -41,6 +40,7 @@ public class NodeParser : MonoBehaviour, IInitializer
                 ParseNode(new NodeFinishedTextSignal());
                 break;
             case EndNode temp:
+                temp.Implement();
                 break;
             case DialogueNode temp:
                 _bus.Invoke(new NodeParsedDataSignal(temp.data));

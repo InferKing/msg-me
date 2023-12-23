@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sonya Atlas 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 3c24d0af16941ae459787aa70f4d4b2a, type: 3}
+    - {fileID: 2800000, guid: b66b4674eba435d4d906bd25c89c73d4, type: 3}
+    - {fileID: 2800000, guid: e401c52eb713276448ca2bde7ea36037, type: 3}
+    - {fileID: 2800000, guid: eed0a9af01ccdeb4ca3fb81974b18884, type: 3}
+    - {fileID: 2800000, guid: 55708f3a63905b84795bc1785701e63b, type: 3}
+    - {fileID: 2800000, guid: 10882852e6e48084699581fed9f94578, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 10882852e6e48084699581fed9f94578, type: 3}
+  - {fileID: 21300000, guid: b66b4674eba435d4d906bd25c89c73d4, type: 3}
+  - {fileID: 21300000, guid: 55708f3a63905b84795bc1785701e63b, type: 3}
+  - {fileID: 21300000, guid: e401c52eb713276448ca2bde7ea36037, type: 3}
+  - {fileID: 21300000, guid: 3c24d0af16941ae459787aa70f4d4b2a, type: 3}
+  - {fileID: 21300000, guid: eed0a9af01ccdeb4ca3fb81974b18884, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Aiko_SummerUni_Smile_Blush
+  - Aiko_SummerUni_Frown_Blush
+  - Aiko_SummerUni_Smile
+  - Aiko_SummerUni_Shout
+  - Aiko_SummerUni_Frown
+  - Aiko_SummerUni_Shout_Blush
+  m_RenderDataMap: {}
+  m_Tag: Sonya Atlas 2
+  m_IsVariant: 0

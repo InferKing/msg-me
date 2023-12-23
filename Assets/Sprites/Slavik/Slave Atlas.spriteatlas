@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Slave Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 0ba15a471cf1477429f95bb098634509, type: 3}
+    - {fileID: 2800000, guid: fe0e450329541f445b07a55f71b0df0f, type: 3}
+    - {fileID: 2800000, guid: 4f27ca3b3b84f9e478070473d511676e, type: 3}
+    - {fileID: 2800000, guid: 586c2c9402e0cd24d8de3fdd30618a11, type: 3}
+    - {fileID: 2800000, guid: 939a358810c4c6c4e8a341c5eeed42c2, type: 3}
+    - {fileID: 2800000, guid: 947db59b7f5b25542b5065bf7d3031db, type: 3}
+    - {fileID: 2800000, guid: cbb4a62d40940344da2a384ec58376e3, type: 3}
+    - {fileID: 2800000, guid: 0255a60bb9227784885ea3067c95a887, type: 3}
+    - {fileID: 2800000, guid: c74fd4d2586501e479b2ae9c482fc255, type: 3}
+    - {fileID: 2800000, guid: 5858d11c42d587347aeed9d582c5df2f, type: 3}
+    - {fileID: 2800000, guid: 18899308f006d0b46bc48d297a4210ce, type: 3}
+    - {fileID: 2800000, guid: 613b607e527f3404db6f24243ebf9fef, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c74fd4d2586501e479b2ae9c482fc255, type: 3}
+  - {fileID: 21300000, guid: fe0e450329541f445b07a55f71b0df0f, type: 3}
+  - {fileID: 21300000, guid: 586c2c9402e0cd24d8de3fdd30618a11, type: 3}
+  - {fileID: 21300000, guid: 0ba15a471cf1477429f95bb098634509, type: 3}
+  - {fileID: 21300000, guid: 18899308f006d0b46bc48d297a4210ce, type: 3}
+  - {fileID: 21300000, guid: 939a358810c4c6c4e8a341c5eeed42c2, type: 3}
+  - {fileID: 21300000, guid: 0255a60bb9227784885ea3067c95a887, type: 3}
+  - {fileID: 21300000, guid: 4f27ca3b3b84f9e478070473d511676e, type: 3}
+  - {fileID: 21300000, guid: 947db59b7f5b25542b5065bf7d3031db, type: 3}
+  - {fileID: 21300000, guid: 5858d11c42d587347aeed9d582c5df2f, type: 3}
+  - {fileID: 21300000, guid: cbb4a62d40940344da2a384ec58376e3, type: 3}
+  - {fileID: 21300000, guid: 613b607e527f3404db6f24243ebf9fef, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - yuu_uniform_emo_8_really angry2
+  - yuu_uniform_emo_2_blush
+  - yuu_uniform_emo_4_excited
+  - yuu_uniform_emo_1_angry2
+  - yuu_uniform_emo_10_shocked2
+  - yuu_uniform_emo_5_happy2
+  - yuu_uniform_emo_7_questioning
+  - yuu_uniform_emo_3_chuunibyou3
+  - yuu_uniform_emo_5_happy3
+  - yuu_uniform_emo_9_sad2
+  - yuu_uniform_emo_6_mischievous2
+  - yuu_uniform_emo_11_surprised
+  m_RenderDataMap: {}
+  m_Tag: Slave Atlas
+  m_IsVariant: 0

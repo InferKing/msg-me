@@ -174,6 +174,62 @@ MonoBehaviour:
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
+--- !u!114 &-9167173020934233538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 24520, y: 1128}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: -9167173020934233538}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: 2042726951056700789}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: -9167173020934233538}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -3995933941093693715}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u042D\u0442\u0430 \u0432\u0441\u0442\u0440\u0435\u0447\u0430 \u044F\u0432\u043D\u043E
+      \u0432\u044B\u0437\u044B\u0432\u0430\u043B\u0430 \u043F\u0440\u043E\u0442\u0438\u0432\u043E\u0440\u0435\u0447\u0438\u0432\u044B\u0435
+      \u044D\u043C\u043E\u0446\u0438\u0438"
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+    isNextPath: 0
 --- !u!114 &-9154147598363752886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,7 +746,7 @@ MonoBehaviour:
       character: 0
     text: "\u0421\u043E\u043D\u044C, \u0430 \u0441\u0438\u043C\u043F\u0430\u0442\u0438\u0447\u043D\u0430\u044F
       \u0434\u0435\u0432\u0443\u0448\u043A\u0430 \u0443 \u043C\u0435\u043D\u044F
-      \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u0442\u0441\u044F\u2026"
+      \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u0442\u0441\u044F..."
     sprite: {fileID: 21300000, guid: 8a453c9e8d5db314a8550598cd7d93dd, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -2285,7 +2341,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: 1866568838762143787}
+        node: {fileID: -5978957039784941284}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2869,7 +2925,7 @@ MonoBehaviour:
       character: 2
     text: "\u042F \u0442\u0435\u0431\u0435 \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C
       \u0431\u0443\u0434\u0443. \u0410 \u043F\u043E\u0442\u043E\u043C \u043A\u0430\u043A
-      \u043D\u0430\u0447\u043D\u0451\u043C \u0432\u043C\u0435\u0441\u0442\u0435 \u0438\u0433\u0440\u0430\u0442\u044C\u2026"
+      \u043D\u0430\u0447\u043D\u0451\u043C \u0432\u043C\u0435\u0441\u0442\u0435 \u0438\u0433\u0440\u0430\u0442\u044C..."
     sprite: {fileID: 21300000, guid: 5d065cbf2ce9f1a4095f652a2439ba92, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -3693,7 +3749,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 61720, y: 424}
+  position: {x: 61720, y: 664}
   ports:
     keys:
     - input
@@ -3717,7 +3773,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -2783148436076582637}
+        node: {fileID: 8791029787367549015}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -4994,7 +5050,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 1866568838762143787}
+        node: {fileID: -7410673330262688334}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -8420,7 +8476,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 2042726951056700789}
+        node: {fileID: -9167173020934233538}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -8508,7 +8564,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 41560, y: 424}
+  position: {x: 41544, y: 600}
   ports:
     keys:
     - input
@@ -8532,7 +8588,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: 5340822736520372794}
+        node: {fileID: 4678784891900446710}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -8776,7 +8832,7 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0441\u0442\u043E\u0440\u0430\u0445 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0430,
       \u0438\u043B\u0438 \u0432\u0441\u0451 \u0437\u0430\u0440\u0430\u043D\u0435\u0435
       \u0431\u044B\u043B\u043E \u0440\u0435\u0448\u0435\u043D\u043E \u0432\u0435\u0440\u0448\u0438\u0442\u0435\u043B\u044F\u043C\u0438
-      \u0441\u0443\u0434\u0435\u0431, \u2012 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E.
+      \u0441\u0443\u0434\u0435\u0431, - \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E.
       \u041D\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u0441\u0442\u0432\u0438\u044F
       \u043E\u043A\u0430\u0437\u0430\u043B\u0438\u0441\u044C \u0441\u043B\u0438\u0448\u043A\u043E\u043C
       \u0441\u0435\u0440\u044C\u0451\u0437\u043D\u044B\u043C\u0438. \u0410 \u043D\u0443\u0436\u043D\u043E
@@ -8895,7 +8951,7 @@ MonoBehaviour:
       name: ...
       character: 8
     text: "\u041F\u0440\u043E\u0437\u0432\u0435\u043D\u0435\u043B \u0437\u0432\u043E\u043D\u043E\u043A.
-      \u0429\u0451\u043A\u0438 \u0410\u043D\u044E\u0442\u0430 \u043F\u044B\u043B\u0430\u043B\u0438
+      \u0429\u0451\u043A\u0438 \u0410\u043D\u044E\u0442\u044B \u043F\u044B\u043B\u0430\u043B\u0438
       \u0430\u043B\u044B\u043C \u0446\u0432\u0435\u0442\u043E\u043C."
     sprite: {fileID: 0}
     music: {fileID: 0}
@@ -8951,7 +9007,7 @@ MonoBehaviour:
       name: "\u0410\u043D\u044E\u0442\u0430"
       character: 0
     text: "\u0414\u0430 \u0435\u0449\u0451 \u0438 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u0443\u044E
-      \u0433\u0440\u0430\u043C\u043E\u0442\u0443 \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u043B\u0438\u2026
+      \u0433\u0440\u0430\u043C\u043E\u0442\u0443 \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u043B\u0438...
       \u0418\u0437\u0432\u0435\u0440\u0433\u0438!"
     sprite: {fileID: 21300000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
     music: {fileID: 0}
@@ -10489,7 +10545,7 @@ MonoBehaviour:
       character: 0
     text: "\u0422\u044B \u0436\u0435 \u0437\u043D\u0430\u0435\u0448\u044C, \u043C\u043D\u0435
       \u044D\u0442\u043E \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E
-      \u043D\u0435\u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u2026"
+      \u043D\u0435\u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E..."
     sprite: {fileID: 21300000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -10519,7 +10575,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: -6826120128321018190}
+        node: {fileID: 8791029787367549015}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -10988,7 +11044,7 @@ MonoBehaviour:
       \u0442\u0430\u043A\u043E\u0433\u043E, \u043D\u043E \u043D\u0435 \u0440\u0430\u0441\u0442\u0435\u0440\u044F\u043B\u0441\u044F,
       \u0438 \u043F\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u043B \u043E\u0431\u044B\u0447\u043D\u044B\u0439
       \u0447\u043C\u043E\u043A \u0432 \u0441\u0430\u043C\u044B\u0439 \u0441\u043B\u0430\u0434\u043A\u0438\u0439
-      \u0438 \u043F\u0435\u0440\u0432\u044B\u0439 \u043F\u043E\u0446\u0435\u043B\u0443\u044E
+      \u0438 \u043F\u0435\u0440\u0432\u044B\u0439 \u043F\u043E\u0446\u0435\u043B\u0443\u0439
       \u0410\u043D\u044E\u0442\u044B."
     sprite: {fileID: 0}
     music: {fileID: 0}
@@ -11509,7 +11565,7 @@ MonoBehaviour:
       \"\u0414\u043E\u0431\u0440\u043E\u0435 \u0443\u0442\u0440\u043E, \u043F\u0440\u0438\u043D\u0446\u0435\u0441\u0441\u0430\"
       \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u043B\u0430 \u043F\u043E\u0437\u0436\u0435
       \u0435\u0451 \u043F\u0440\u043E\u0431\u0443\u0436\u0434\u0435\u043D\u0438\u044F
-      \u2014 \u0433\u0440\u0443\u0441\u0442\u0438\u043B\u0430."
+      - \u0433\u0440\u0443\u0441\u0442\u0438\u043B\u0430."
     sprite: {fileID: 0}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -12268,7 +12324,7 @@ MonoBehaviour:
       character: 2
     text: "\u0410 \u044F \u0442\u0435\u0431\u0435 \u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0430,
       \u0447\u0442\u043E \u0443 \u0438\u0433\u0440\u044B \u0433\u0440\u0430\u0444\u0438\u043A\u0430
-      \u2012 \u043E\u0433\u043E\u043D\u044C. \u0422\u044B \u043F\u043E\u043A\u043E\u043F\u0430\u0439\u0441\u044F
+      - \u043E\u0433\u043E\u043D\u044C. \u0422\u044B \u043F\u043E\u043A\u043E\u043F\u0430\u0439\u0441\u044F
       \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0438
       \u0432\u043E\u043E\u0431\u0449\u0435 \u043A\u0440\u0430\u0441\u0430\u0432\u0438\u0446\u0443
       \u0441\u0434\u0435\u043B\u0430\u0435\u0448\u044C!"
@@ -12755,7 +12811,7 @@ MonoBehaviour:
       \u0441 \u043D\u0438\u043C \u043D\u0430 \u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u044B\u0445
       \u0442\u0435\u0440\u043C\u0438\u043D\u0430\u0445? \u041A\u0442\u043E \u0438\u0437
       \u043D\u0430\u0441 \u0431\u044B \u0441\u0435\u0439\u0447\u0430\u0441 \u0441\u0438\u0434\u0435\u043B
-      \u0432 \u043D\u0435\u043F\u043E\u043D\u0438\u043C\u0430\u043D\u0438\u0438\u2026"
+      \u0432 \u043D\u0435\u043F\u043E\u043D\u0438\u043C\u0430\u043D\u0438\u0438..."
     sprite: {fileID: 21300000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -12869,7 +12925,7 @@ MonoBehaviour:
       character: 0
     text: "\u041E\u0433\u043E. \u042F \u0434\u0430\u0436\u0435 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044C
       \u0441\u0435\u0431\u0435 \u0442\u0430\u043A\u043E\u0433\u043E \u043D\u0435
-      \u043C\u043E\u0433\u043B\u0430\u2026 \u0410 \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0435
+      \u043C\u043E\u0433\u043B\u0430... \u0410 \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0435
       \xAB\u043A\u0430\u0447\u0430\u044E\u0442\u0441\u044F\xBB?"
     sprite: {fileID: 21300000, guid: 8a453c9e8d5db314a8550598cd7d93dd, type: 3}
     music: {fileID: 0}
@@ -13722,7 +13778,7 @@ MonoBehaviour:
       \u0441\u0438\u043B\u044C\u043D\u043E \u043E\u0442\u043B\u0438\u0447\u0430\u043B\u0430\u0441\u044C
       \u043E\u0442 \u0410\u043D\u0438: \u0443 \u0410\u043D\u044E\u0442\u044B \u0431\u044B\u043B\u0438
       \u0441\u0432\u0435\u0442\u043B\u044B\u0435 \u0432\u043E\u043B\u043E\u0441\u044B, 
-      \u0443 \u0421\u043E\u043D\u0438 \u2012 \u0442\u0451\u043C\u043D\u043E-\u0440\u0443\u0441\u044B\u0435. "
+      \u0443 \u0421\u043E\u043D\u0438 - \u0442\u0451\u043C\u043D\u043E-\u0440\u0443\u0441\u044B\u0435. "
     sprite: {fileID: 0}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -15542,7 +15598,6 @@ MonoBehaviour:
   - {fileID: 5872904115562430352}
   - {fileID: 3558577254797395597}
   - {fileID: -7410673330262688334}
-  - {fileID: 1866568838762143787}
   - {fileID: -5978957039784941284}
   - {fileID: -9110705771433413643}
   - {fileID: -925216687491789008}
@@ -15726,7 +15781,10 @@ MonoBehaviour:
   - {fileID: 8292848538479613842}
   - {fileID: -1478839002547168132}
   - {fileID: -8522583888991688583}
-  current: {fileID: 6702513844113235261}
+  - {fileID: 4678784891900446710}
+  - {fileID: 8791029787367549015}
+  - {fileID: -9167173020934233538}
+  current: {fileID: -7288468887039049932}
 --- !u!114 &13044990182799067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18350,63 +18408,6 @@ MonoBehaviour:
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
---- !u!114 &1866568838762143787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 55896, y: 424}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: 1866568838762143787}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: -7410673330262688334}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: 1866568838762143787}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: input
-        node: {fileID: -5978957039784941284}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: 0
-  output: 0
-  data:
-    characterInfo:
-      name: ...
-      character: 8
-    text: "\u0410\u043D\u0434\u0440\u0435\u0439 \u0434\u043E\u043B\u0436\u0435\u043D
-      \u0431\u044B\u043B \u0443\u0436\u0435 \u043F\u0440\u0438\u0435\u0445\u0430\u0442\u044C
-      \u0438 \u0441\u0442\u043E\u044F\u0442\u044C \u0432 \u043E\u0431\u043E\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u043E\u043C
-      \u0438\u043C \u043C\u0435\u0441\u0442\u0435."
-    sprite: {fileID: 0}
-    music: {fileID: 0}
-    fx: {fileID: 0}
-    isNextPath: 0
 --- !u!114 &1870914587096409189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18590,7 +18591,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24216, y: 856}
+  position: {x: 24200, y: 1128}
   ports:
     keys:
     - input
@@ -18614,7 +18615,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -3995933941093693715}
+        node: {fileID: -9167173020934233538}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -19637,7 +19638,7 @@ MonoBehaviour:
       name: "\u0410\u043D\u044E\u0442\u0430"
       character: 0
     text: "\u0427\u0442\u043E-\u0442\u043E \u0434\u043E\u043B\u0433\u043E \u043E\u043D\u0430
-      \u0443\u0436\u0435 \u0442\u0430\u043C\u2026"
+      \u0443\u0436\u0435 \u0442\u0430\u043C..."
     sprite: {fileID: 21300000, guid: 8a453c9e8d5db314a8550598cd7d93dd, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -19979,7 +19980,7 @@ MonoBehaviour:
       \u0433\u043E\u0434 \u043F\u0440\u0438\u0435\u0434\u0443 \u043A \u0442\u0435\u0431\u0435
       \u0443\u0447\u0438\u0442\u044C\u0441\u044F. \u0414\u0430\u0432\u0430\u0439
       \u0432\u0441\u0435\u0433\u0434\u0430 \u0431\u0443\u0434\u0435\u043C \u0432\u043C\u0435\u0441\u0442\u0435!"
-    sprite: {fileID: 21300000, guid: 55635c5775c0c1444ad499c4b063b74b, type: 3}
+    sprite: {fileID: 0}
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
@@ -21073,7 +21074,7 @@ MonoBehaviour:
       name: "\u0410\u043D\u044E\u0442\u0430 (\u043F\u0440\u043E \u0441\u0435\u0431\u044F)"
       character: 0
     text: "\u042D\u0442\u043E \u0442\u043E\u0447\u043D\u043E \u043C\u043E\u0439 \u0410\u043D\u0434\u0440\u0435\u0439"
-    sprite: {fileID: 21300000, guid: aaa3eca6691390b42b2dace1ec162ba2, type: 3}
+    sprite: {fileID: 0}
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
@@ -22172,7 +22173,7 @@ MonoBehaviour:
       \u0443 \u0410\u043D\u044E\u0442\u044B \u043D\u0430 \u043F\u0435\u0440\u0432\u043E\u043C
       \u043C\u0435\u0441\u0442\u0435 \u0432\u0441\u0435\u0433\u0434\u0430 \u0441\u0442\u043E\u044F\u043B\u0430
       \u043C\u0443\u0437\u044B\u043A\u0430, \u0442\u043E \u0443 \u0421\u043E\u043D\u0438
-      \u2013 \u043E\u043D\u043B\u0430\u0439\u043D-\u0438\u0433\u0440\u044B. \u041D\u043E
+      - \u043E\u043D\u043B\u0430\u0439\u043D-\u0438\u0433\u0440\u044B. \u041D\u043E
       \u0433\u0434\u0435-\u0442\u043E \u0432\u0441\u0451 \u0436\u0435 \u0431\u044B\u043B\u0438
       \u0442\u043E\u0447\u043A\u0438 \u0441\u043E\u043F\u0440\u0438\u043A\u043E\u0441\u043D\u043E\u0432\u0435\u043D\u0438\u044F."
     sprite: {fileID: 0}
@@ -22468,6 +22469,62 @@ MonoBehaviour:
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
+--- !u!114 &4678784891900446710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 41576, y: 296}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 4678784891900446710}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: -3890863534633003379}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 4678784891900446710}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: 5340822736520372794}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u0438\u0445 \u0441\u043B\u043E\u0432
+      \u0410\u043D\u044E\u0442\u0430 \u043F\u043E\u0441\u043A\u043E\u0440\u0435\u0435
+      \u043F\u043E\u0431\u0435\u0436\u0430\u043B\u0430 \u0434\u043E\u043C\u043E\u0439"
+    sprite: {fileID: 0}
+    music: {fileID: 0}
+    fx: {fileID: 0}
+    isNextPath: 0
 --- !u!114 &4757986192541509763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22518,7 +22575,7 @@ MonoBehaviour:
       name: ...
       character: 8
     text: "\u0410\u043D\u044E\u0442\u0430 \u043E\u0447\u0435\u043D\u044C \u0442\u044F\u0436\u0435\u043B\u043E
-      \u0432\u0434\u043E\u0445\u043D\u0443\u043B\u0430 \u0438 \u043E\u043F\u0443\u0441\u0442\u0438\u043B\u0430
+      \u0432\u0437\u0434\u043E\u0445\u043D\u0443\u043B\u0430 \u0438 \u043E\u043F\u0443\u0441\u0442\u0438\u043B\u0430
       \u0433\u043E\u043B\u043E\u0432\u0443."
     sprite: {fileID: 21300000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
     music: {fileID: 0}
@@ -22855,7 +22912,7 @@ MonoBehaviour:
       \u044D\u043C\u043E\u0446\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0435
       \u0432\u044B\u0433\u043E\u0440\u0430\u043D\u0438\u0435: \u043F\u0430\u043B\u044C\u0446\u044B
       \u043D\u0435 \u0445\u043E\u0442\u0435\u043B\u0438 \u0441\u043B\u0443\u0448\u0430\u0442\u044C,
-      \u0433\u043E\u043B\u043E\u0432\u0430 \u2012 \u0437\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u0442\u044C
+      \u0433\u043E\u043B\u043E\u0432\u0430 - \u0437\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u0442\u044C
       \u043D\u043E\u0442\u044B, \u0430 \u043D\u043E\u0433\u0438 \u043D\u0430\u0436\u0438\u043C\u0430\u0442\u044C
       \u043F\u0435\u0434\u0430\u043B\u0438 \u0432 \u043D\u0443\u0436\u043D\u044B\u0439
       \u043C\u043E\u043C\u0435\u043D\u0442."
@@ -23487,7 +23544,7 @@ MonoBehaviour:
   m_Name: Change Scene
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 41880, y: 424}
+  position: {x: 41864, y: 552}
   ports:
     keys:
     - input
@@ -23499,7 +23556,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: -3890863534633003379}
+        node: {fileID: 4678784891900446710}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -23574,7 +23631,7 @@ MonoBehaviour:
       \u041B\u043E\u0433\u0438\u0447\u043D\u043E \u0436\u0435: \u0435\u0441\u043B\u0438
       \u0442\u044B \u0434\u0435\u0432\u0443\u0448\u043A\u0430, \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436
       \u0443 \u0442\u0435\u0431\u044F \u0436\u0435\u043D\u0441\u043A\u0438\u0439,
-      \u0435\u0441\u043B\u0438 \u043F\u0430\u0440\u0435\u043D\u044C \u2013 \u043C\u0443\u0436\u0441\u043A\u043E\u0439."
+      \u0435\u0441\u043B\u0438 \u043F\u0430\u0440\u0435\u043D\u044C - \u043C\u0443\u0436\u0441\u043A\u043E\u0439."
     sprite: {fileID: 21300000, guid: 99d3481dc5353074e93c2374baee6971, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -26893,7 +26950,7 @@ MonoBehaviour:
       name: "\u0410\u043D\u044E\u0442\u0430"
       character: 0
     text: "\u0421\u043E\u043D\u044C, \u044F \u0434\u0430\u0436\u0435 \u043D\u0435
-      \u0437\u043D\u0430\u044E\u2026"
+      \u0437\u043D\u0430\u044E..."
     sprite: {fileID: 21300000, guid: 2af05139a17e206439aa701b178d0d18, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -26954,8 +27011,8 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438\u0441\u044C \u0438
       \u0434\u043E \u0441\u0438\u0445 \u043F\u043E\u0440. \u041F\u0430\u043F\u0430
       \u0442\u0440\u0435\u0431\u043E\u0432\u0430\u043B \u0438\u0434\u0435\u0430\u043B\u044C\u043D\u044B\u0445
-      \u043E\u0446\u0435\u043D\u043E\u043A. \u0410 \u043C\u0430\u043C\u0430 \u2013
-      \u0432\u0441\u0435\u0446\u0435\u043B\u043E\u0433\u043E \u043F\u043E\u0432\u0438\u043D\u043E\u0432\u0435\u043D\u0438\u044F."
+      \u043E\u0446\u0435\u043D\u043E\u043A. \u0410 \u043C\u0430\u043C\u0430 - \u0432\u0441\u0435\u0446\u0435\u043B\u043E\u0433\u043E
+      \u043F\u043E\u0432\u0438\u043D\u043E\u0432\u0435\u043D\u0438\u044F."
     sprite: {fileID: 21300000, guid: 82acd5c08424fba4eacfe19be25e5006, type: 3}
     music: {fileID: 0}
     fx: {fileID: 0}
@@ -27464,11 +27521,11 @@ MonoBehaviour:
     characterInfo:
       name: ...
       character: 8
-    text: "\u0410\u043D\u044E\u0442\u0430 \u2012 \u0445\u0440\u0443\u043F\u0435\u043D\u044C\u043A\u043E\u0433\u043E
+    text: "\u0410\u043D\u044E\u0442\u0430 - \u0445\u0440\u0443\u043F\u0435\u043D\u044C\u043A\u043E\u0433\u043E
       \u0442\u0435\u043B\u043E\u0441\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0441
       \u0442\u043E\u043D\u043A\u0438\u043C\u0438 \u0434\u043B\u0438\u043D\u043D\u044B\u043C\u0438
       \u043F\u0430\u043B\u044C\u0446\u0430\u043C\u0438, \u0430 \u0421\u043E\u043D\u044F
-      \u2012 \u0441\u0440\u0435\u0434\u043D\u0435\u0433\u043E \u0442\u0435\u043B\u043E\u0441\u043B\u043E\u0436\u0435\u043D\u0438\u044F
+      - \u0441\u0440\u0435\u0434\u043D\u0435\u0433\u043E \u0442\u0435\u043B\u043E\u0441\u043B\u043E\u0436\u0435\u043D\u0438\u044F
       \u0441 \u043C\u043E\u0449\u043D\u044B\u043C\u0438 \u0440\u0443\u043A\u0430\u043C\u0438,
       \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0432\u0441\u0435\u0433\u0434\u0430
       \u0431\u044B\u043B\u0438 \u043D\u0430\u0433\u043E\u0442\u043E\u0432\u0435 \u0434\u0430\u0442\u044C
@@ -27529,7 +27586,7 @@ MonoBehaviour:
       name: "\u0410\u043D\u044E\u0442\u0430"
       character: 0
     text: "\u0414\u0430\u0432\u0430\u0439!"
-    sprite: {fileID: 21300000, guid: c40c5ef74054f6f4fb8639dfa9c31f26, type: 3}
+    sprite: {fileID: 0}
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
@@ -28051,7 +28108,7 @@ MonoBehaviour:
     text: "\u041F\u0440\u043E\u0441\u0442\u043E \u0441\u043E\u0437\u0434\u0430\u0439
       \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0430 \u0438 \u0437\u0430\u0445\u043E\u0434\u0438
       \u043D\u0430 \u0442\u0440\u0435\u0442\u044C\u044E \u043B\u0438\u043D\u0438\u044E
-      \u2013 \u0442\u0430\u043C \u043F\u043E\u0447\u0442\u0438 \u043D\u0438\u043A\u0442\u043E
+      - \u0442\u0430\u043C \u043F\u043E\u0447\u0442\u0438 \u043D\u0438\u043A\u0442\u043E
       \u043D\u0435 \u0438\u0433\u0440\u0430\u0435\u0442. \u042F \u0442\u0435\u0431\u0435
       \u043A\u0430\u043A \u0440\u0430\u0437 \u043E\u0441\u043D\u043E\u0432\u044B
       \u043F\u043E\u043A\u0430\u0436\u0443. \u0410 \u0432\u0434\u0440\u0443\u0433
@@ -28343,6 +28400,62 @@ MonoBehaviour:
       \u043E\u0447\u0435\u043D\u044C \u0433\u0440\u0443\u0441\u0442\u043D\u043E\u0439."
     sprite: {fileID: 0}
     music: {fileID: 8300000, guid: 87da941e5772e764baeec7412418cd81, type: 3}
+    fx: {fileID: 0}
+    isNextPath: 0
+--- !u!114 &8791029787367549015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3fa4407e7bbfd45955264493ca973f, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 61736, y: 376}
+  ports:
+    keys:
+    - input
+    - output
+    values:
+    - _fieldName: input
+      _node: {fileID: 8791029787367549015}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: output
+        node: {fileID: -6826120128321018190}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: output
+      _node: {fileID: 8791029787367549015}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: input
+        node: {fileID: -2783148436076582637}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: 0
+  output: 0
+  data:
+    characterInfo:
+      name: ...
+      character: 8
+    text: "\u041F\u043E\u0441\u043B\u0435 \u0447\u0435\u0433\u043E \u0440\u0435\u0431\u044F\u0442\u0430
+      \u043F\u043E\u0448\u043B\u0438 \u0432 \u0441\u0442\u043E\u0440\u043E\u043D\u0443
+      \u043F\u0430\u0440\u043A\u0430"
+    sprite: {fileID: 0}
+    music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
 --- !u!114 &8824493987812645497

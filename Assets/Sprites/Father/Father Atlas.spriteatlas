@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Father Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 582b1f95c11ecfc428981235a1c40634, type: 3}
+    - {fileID: 2800000, guid: ced0b471869f01440bd35b1f2e85e744, type: 3}
+    - {fileID: 2800000, guid: d07e19e54027b6e4f91a2a2776d4e7d6, type: 3}
+    - {fileID: 2800000, guid: f83756c9427c8814d9e83d0ccd06ae3f, type: 3}
+    - {fileID: 2800000, guid: b2d129836b6909b429a19756d32cf212, type: 3}
+    - {fileID: 2800000, guid: bc10776f22dd8ee42a78734a07c1fb67, type: 3}
+    - {fileID: 2800000, guid: bff5e5145e38469479430db3ae094671, type: 3}
+    - {fileID: 2800000, guid: 16d3b613962888c4790d4263af4bef69, type: 3}
+    - {fileID: 2800000, guid: fbedccb2282c36446af542a8a46468db, type: 3}
+    - {fileID: 2800000, guid: 4b55b161f2822ae489d777aba0e1b05f, type: 3}
+    - {fileID: 2800000, guid: 8f45aa09ade4e144986ee4882be06d1f, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 4b55b161f2822ae489d777aba0e1b05f, type: 3}
+  - {fileID: 21300000, guid: ced0b471869f01440bd35b1f2e85e744, type: 3}
+  - {fileID: 21300000, guid: fbedccb2282c36446af542a8a46468db, type: 3}
+  - {fileID: 21300000, guid: 16d3b613962888c4790d4263af4bef69, type: 3}
+  - {fileID: 21300000, guid: b2d129836b6909b429a19756d32cf212, type: 3}
+  - {fileID: 21300000, guid: bff5e5145e38469479430db3ae094671, type: 3}
+  - {fileID: 21300000, guid: 582b1f95c11ecfc428981235a1c40634, type: 3}
+  - {fileID: 21300000, guid: d07e19e54027b6e4f91a2a2776d4e7d6, type: 3}
+  - {fileID: 21300000, guid: 8f45aa09ade4e144986ee4882be06d1f, type: 3}
+  - {fileID: 21300000, guid: f83756c9427c8814d9e83d0ccd06ae3f, type: 3}
+  - {fileID: 21300000, guid: bc10776f22dd8ee42a78734a07c1fb67, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 0953_136_shoji_1_a_10
+  - 0945_136_shoji_1_a_02
+  - 0952_136_shoji_1_a_09
+  - 0951_136_shoji_1_a_08
+  - 0948_136_shoji_1_a_05
+  - 0950_136_shoji_1_a_07
+  - 0944_136_shoji_1_a_01
+  - 0946_136_shoji_1_a_03
+  - 0954_136_shoji_1_a_11
+  - 0947_136_shoji_1_a_04
+  - 0949_136_shoji_1_a_06
+  m_RenderDataMap: {}
+  m_Tag: Father Atlas
+  m_IsVariant: 0

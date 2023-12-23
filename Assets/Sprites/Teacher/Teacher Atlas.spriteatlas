@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Teacher Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7032bc820ac62ac4aa96df140ddbbb41, type: 3}
+    - {fileID: 2800000, guid: 06e962c5e6ea46c40a7f7a11d7bfd98d, type: 3}
+    - {fileID: 2800000, guid: a33ca7882529dc84084a687eda5e50ec, type: 3}
+    - {fileID: 2800000, guid: ed64df4cb74ad244cbf125c0ad7e3202, type: 3}
+    - {fileID: 2800000, guid: c620fd5ba5e689a4e9207d58992e65eb, type: 3}
+    - {fileID: 2800000, guid: fdcb1963b49a4cb41bd5b65dd76469e3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 7032bc820ac62ac4aa96df140ddbbb41, type: 3}
+  - {fileID: 21300000, guid: fdcb1963b49a4cb41bd5b65dd76469e3, type: 3}
+  - {fileID: 21300000, guid: 06e962c5e6ea46c40a7f7a11d7bfd98d, type: 3}
+  - {fileID: 21300000, guid: a33ca7882529dc84084a687eda5e50ec, type: 3}
+  - {fileID: 21300000, guid: c620fd5ba5e689a4e9207d58992e65eb, type: 3}
+  - {fileID: 21300000, guid: ed64df4cb74ad244cbf125c0ad7e3202, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - kenji_annoyed
+  - kenji_worried
+  - kenji_fawn
+  - kenji_neutral
+  - kenji_smirk
+  - kenji_smile
+  m_RenderDataMap: {}
+  m_Tag: Teacher Atlas
+  m_IsVariant: 0

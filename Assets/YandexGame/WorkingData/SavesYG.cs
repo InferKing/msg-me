@@ -11,6 +11,7 @@ namespace YG
         public bool promptDone;
 
         public int andreyCount = 0, slaveCount = 0, teacherCount = 0;
+        public bool isAutoText = false;
         public SavesYG()
         {
             

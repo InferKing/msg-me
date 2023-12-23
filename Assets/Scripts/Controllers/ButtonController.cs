@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using YG;
 
 public class ButtonController : MonoBehaviour, IInitializer
 {
     [SerializeField] private AudioSource _src;
     [SerializeField] private Button[] _buttons;
+    [SerializeField] private Button _autoButton;
+    private bool _locked = false;
+
     private Dictionary<Button, PathNodeData> _dataButtons;
     private EventBus _bus;
     public void Initialize()
@@ -15,6 +19,16 @@ public class ButtonController : MonoBehaviour, IInitializer
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<ShowPathButtonsSignal>(OnShowPathButtons);
         _bus.Subscribe<HidePathButtonsSignal>(OnHidePathButtons);
+        _bus.Subscribe<BeforeShowAdSignal>((item) => _locked = true);
+        _bus.Subscribe<AfterShowAdSignal>((item) => _locked = false);
+    }
+    public void AutoButton()
+    {
+        if (_bus == null || _locked) return;
+        YandexGame.savesData.isAutoText = !YandexGame.savesData.isAutoText;
+        _src.Play();
+        _bus.Invoke(new ToggleAutoTextSignal(YandexGame.savesData.isAutoText));
+        _bus.Invoke(new PlayerInteractSignal(!YandexGame.savesData.isAutoText));
     }
     private void OnShowPathButtons(ShowPathButtonsSignal signal)
     {
@@ -30,6 +44,10 @@ public class ButtonController : MonoBehaviour, IInitializer
             _dataButtons.Add(_buttons[i], signal.data[i]);
         }
         StartCoroutine(ToggleButtons(true));
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
     private void OnHidePathButtons(HidePathButtonsSignal signal)
     {

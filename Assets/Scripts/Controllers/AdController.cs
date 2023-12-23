@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using YG;
 
@@ -14,7 +12,7 @@ public class AdController : MonoBehaviour, IInitializer
     }
     public void AdClosed() 
     {
-        _bus.Invoke(new PlayerInteractSignal(true));
+        _bus.Invoke(new PlayerInteractSignal(!YandexGame.savesData.isAutoText));
         _bus.Invoke(new AfterShowAdSignal()); 
     }
     private void OnStartShowAd(StartShowAdSignal signal)

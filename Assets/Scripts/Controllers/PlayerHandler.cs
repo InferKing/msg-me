@@ -1,7 +1,9 @@
 using UnityEngine;
+using YG;
 
 public class PlayerHandler : MonoBehaviour, IInitializer
 {
+    [SerializeField] private CheckMousePos _mousePos;
     private EventBus _bus;
     private bool _canInteract = true;
     public void Initialize()
@@ -11,18 +13,30 @@ public class PlayerHandler : MonoBehaviour, IInitializer
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _canInteract)
+        if (Input.GetMouseButtonDown(0) && _canInteract && _bus != null)
         {
-            _bus.Invoke(new PlayerClickedSignal());
+            if (!_mousePos.IsUnderButton())
+            {
+                _bus.Invoke(new PlayerClickedSignal());
+            }
         }
     }
     private void OnPlayerInteract(PlayerInteractSignal signal)
     {
-        _canInteract = signal.data;
+        if (!YandexGame.savesData.isAutoText)
+        {
+            _canInteract = signal.data;
+        }
+        else
+        {
+            _canInteract = false;
+        }
     }
     private void OnDisable()
     {
         if (_bus == null) return;
         _bus.Unsubscribe<PlayerInteractSignal>(OnPlayerInteract);
     }
+
+    
 }
