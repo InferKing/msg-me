@@ -4,7 +4,6 @@ using YG;
 public class AdController : MonoBehaviour, IInitializer
 {
     private EventBus _bus;
-    private bool _isVideo = true;
     public void Initialize()
     {
         _bus = ServiceLocator.Current.Get<EventBus>();
@@ -12,20 +11,12 @@ public class AdController : MonoBehaviour, IInitializer
     }
     public void AdClosed() 
     {
+        _bus.Invoke(new AfterShowAdSignal());
         _bus.Invoke(new PlayerInteractSignal(!YandexGame.savesData.isAutoText));
-        _bus.Invoke(new AfterShowAdSignal()); 
     }
     private void OnStartShowAd(StartShowAdSignal signal)
     {
-        if (_isVideo)
-        {
-            YandexGame.RewVideoShow(0);
-        }
-        else
-        {
-            YandexGame.FullscreenShow();
-        }
-        _isVideo = !_isVideo;
+        YandexGame.FullscreenShow();
     }
 
     private void OnDisable()

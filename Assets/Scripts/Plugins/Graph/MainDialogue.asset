@@ -11710,7 +11710,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: -1907772401586971664}
+        node: {fileID: 5198617415788704355}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -11974,7 +11974,7 @@ MonoBehaviour:
   m_Name: Ad
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 33368, y: 424}
+  position: {x: 25736, y: 312}
   ports:
     keys:
     - input
@@ -11986,7 +11986,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: 3161331788611754828}
+        node: {fileID: -1561633450404848183}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -11998,7 +11998,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: 5076632681514451798}
+        node: {fileID: -310236385024072360}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -12117,51 +12117,6 @@ MonoBehaviour:
     music: {fileID: 0}
     fx: {fileID: 0}
     isNextPath: 0
---- !u!114 &-1907772401586971664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b1b1c1ba6e7ee47bfe5b6e12b98a17, type: 3}
-  m_Name: Ad
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 23608, y: -24}
-  ports:
-    keys:
-    - input
-    - output
-    values:
-    - _fieldName: input
-      _node: {fileID: -1907772401586971664}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: output
-        node: {fileID: 5198617415788704355}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: output
-      _node: {fileID: -1907772401586971664}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: input
-        node: {fileID: -2209194777132823008}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  input: 0
-  output: 0
 --- !u!114 &-1876292019960733218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12648,7 +12603,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -310236385024072360}
+        node: {fileID: -1953699372360274846}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -14488,7 +14443,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: -1561633450404848183}
+        node: {fileID: -1953699372360274846}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -15349,7 +15304,6 @@ MonoBehaviour:
   - {fileID: 2803580943673243214}
   - {fileID: -2209194777132823008}
   - {fileID: 5198617415788704355}
-  - {fileID: -1907772401586971664}
   - {fileID: 8824493987812645497}
   - {fileID: -5537195373528503311}
   - {fileID: 9155205311212782277}
@@ -15784,7 +15738,7 @@ MonoBehaviour:
   - {fileID: 4678784891900446710}
   - {fileID: 8791029787367549015}
   - {fileID: -9167173020934233538}
-  current: {fileID: -7288468887039049932}
+  current: {fileID: 0}
 --- !u!114 &13044990182799067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20190,7 +20144,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -1953699372360274846}
+        node: {fileID: 5076632681514451798}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -23113,7 +23067,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: output
-        node: {fileID: -1953699372360274846}
+        node: {fileID: 3161331788611754828}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -23345,7 +23299,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: input
-        node: {fileID: -1907772401586971664}
+        node: {fileID: -2209194777132823008}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

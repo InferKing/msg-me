@@ -23,6 +23,7 @@ public class EntryPoint : MonoBehaviour
         (_introView as IInitializer).Initialize();
         _bus.Subscribe<IntroFinishedSignal>((item) =>
         {
+            YG.YandexGame.GameReadyAPI();
             foreach (IInitializer pair in _initializers)
             {
                 pair.Initialize();

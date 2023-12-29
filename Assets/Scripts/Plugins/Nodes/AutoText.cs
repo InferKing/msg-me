@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using YG;
 
@@ -14,10 +15,7 @@ public class AutoText : MonoBehaviour, IInitializer
         _bus.Subscribe<TypeTextFinishedSignal>(OnTypeTextFinished);
         _bus.Subscribe<BeforeShowAdSignal>(OnBeforeShowAd);
         _bus.Subscribe<AfterShowAdSignal>(OnAfterShowAd);
-        _bus.Subscribe<EndingGameSignal>((item) => {
-            YandexGame.savesData.isAutoText = false;
-            if (_delay != null) StopCoroutine(_delay);
-        });
+        _bus.Subscribe<EndingGameSignal>(OnEndingGameSignal);
     }
     private void OnToggleAutoText(ToggleAutoTextSignal signal)
     {
@@ -28,6 +26,12 @@ public class AutoText : MonoBehaviour, IInitializer
     {
         if (!YandexGame.savesData.isAutoText) return;
         _delay = StartCoroutine(Delay());
+    }
+    private void OnEndingGameSignal(EndingGameSignal signal)
+    {
+        YandexGame.savesData.isAutoText = false;
+        YandexGame.SaveProgress();
+        if (_delay != null) StopCoroutine(_delay);
     }
     private void OnBeforeShowAd(BeforeShowAdSignal signal)
     {
@@ -54,5 +58,6 @@ public class AutoText : MonoBehaviour, IInitializer
         _bus.Unsubscribe<TypeTextFinishedSignal>(OnTypeTextFinished);
         _bus.Unsubscribe<BeforeShowAdSignal>(OnBeforeShowAd);
         _bus.Unsubscribe<AfterShowAdSignal>(OnAfterShowAd);
+        _bus.Unsubscribe<EndingGameSignal>(OnEndingGameSignal);
     }
 }
