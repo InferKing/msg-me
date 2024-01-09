@@ -9,6 +9,8 @@ public class AudioController : MonoBehaviour, IInitializer
     {
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<NodeParsedDataSignal>(OnNodeParsedDataSignal);
+        _music.clip = YG.YandexGame.savesData.music;
+        _music.Play();
     }
     private void OnNodeParsedDataSignal(NodeParsedDataSignal signal)
     {
@@ -50,6 +52,7 @@ public class AudioController : MonoBehaviour, IInitializer
     }
     private void OnDisable()
     {
+        if (_bus == null) return;
         _bus.Unsubscribe<NodeParsedDataSignal>(OnNodeParsedDataSignal);
     }
 }

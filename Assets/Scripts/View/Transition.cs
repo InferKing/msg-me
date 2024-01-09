@@ -12,6 +12,11 @@ public class Transition : MonoBehaviour, IInitializer
         _bus.Subscribe<StartChangeSceneSignal>(OnStartChangeScene);
         _bus.Subscribe<FinishChangeSceneSignal>(OnFinishChangeScene);
         _bus.Subscribe<ChangeSceneSignal>(OnChangeSceneSignal);
+        _sprite = YG.YandexGame.savesData.background;
+        if (_sprite != null)
+        {
+            OnChangeSceneSignal(new ChangeSceneSignal());
+        }
     }
     private void OnStartChangeScene(StartChangeSceneSignal signal)
     {

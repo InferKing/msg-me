@@ -23,6 +23,7 @@ public class UIController : MonoBehaviour, IInitializer
         _bus.Subscribe<FinishChangeSceneSignal>(OnFinishChangeScene);
         _bus.Subscribe<ToggleAutoTextSignal>(OnToggleAutoText);
         _bus.Subscribe<EndingGameSignal>((signal) => _outro.SetBool(Constants.pathBtnAnimatorParameter, true));
+
     }
     private void OnNodeParsedData(NodeParsedDataSignal signal)
     {

@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 namespace YG
 {
     [System.Serializable]
@@ -12,6 +14,9 @@ namespace YG
 
         public int andreyCount = 0, slaveCount = 0, teacherCount = 0;
         public bool isAutoText = false;
+        public DialogueNode node;
+        public AudioClip music;
+        public Sprite background;
         public SavesYG()
         {
             

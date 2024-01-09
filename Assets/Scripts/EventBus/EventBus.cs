@@ -26,6 +26,7 @@ public class EventBus : IService
     public void Invoke<T>(T signal)
     {
         string key = typeof(T).Name;
+        Debug.Log(key);
         if (_signalCallbacks.ContainsKey(key))
         {
             foreach (var obj in _signalCallbacks[key])
@@ -34,6 +35,7 @@ public class EventBus : IService
                 callback?.Invoke(signal);
             }
         }
+        
     }
 
     public void Unsubscribe<T>(Action<T> callback)

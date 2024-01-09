@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using YG;
 
-public class ButtonController : MonoBehaviour, IInitializer
+public class BtnController : MonoBehaviour, IInitializer
 {
     [SerializeField] private AudioSource _src;
     [SerializeField] private Button[] _buttons;
-    [SerializeField] private Button _autoButton;
     private bool _locked = false;
 
     private Dictionary<Button, PathNodeData> _dataButtons;
@@ -19,16 +17,35 @@ public class ButtonController : MonoBehaviour, IInitializer
         _bus = ServiceLocator.Current.Get<EventBus>();
         _bus.Subscribe<ShowPathButtonsSignal>(OnShowPathButtons);
         _bus.Subscribe<HidePathButtonsSignal>(OnHidePathButtons);
-        _bus.Subscribe<BeforeShowAdSignal>((item) => _locked = true);
-        _bus.Subscribe<AfterShowAdSignal>((item) => _locked = false);
+        _bus.Subscribe<BeforeShowAdSignal>(OnBeforeShowAdSignal);
+        _bus.Subscribe<AfterShowAdSignal>(OnAfterShowAdSignal);
+        _bus.Subscribe<StartChangeSceneSignal>(OnStartChangeScene);
+        _bus.Subscribe<FinishChangeSceneSignal>(OnFinishChangeScene);
     }
     public void AutoButton()
     {
         if (_bus == null || _locked) return;
-        YandexGame.savesData.isAutoText = !YandexGame.savesData.isAutoText;
+        Debug.Log("AutoButton");
+        YG.YandexGame.savesData.isAutoText = !YG.YandexGame.savesData.isAutoText;
         _src.Play();
-        _bus.Invoke(new ToggleAutoTextSignal(YandexGame.savesData.isAutoText));
-        _bus.Invoke(new PlayerInteractSignal(!YandexGame.savesData.isAutoText));
+        _bus.Invoke(new ToggleAutoTextSignal(YG.YandexGame.savesData.isAutoText));
+        _bus.Invoke(new PlayerInteractSignal(!YG.YandexGame.savesData.isAutoText));
+    }
+    private void OnStartChangeScene(StartChangeSceneSignal signal)
+    {
+        _locked = true;
+    }
+    private void OnFinishChangeScene(FinishChangeSceneSignal signal)
+    {
+        _locked = false;
+    }
+    private void OnBeforeShowAdSignal(BeforeShowAdSignal signal)
+    {
+        _locked = true;
+    }
+    private void OnAfterShowAdSignal(AfterShowAdSignal signal)
+    {
+        _locked = false;
     }
     private void OnShowPathButtons(ShowPathButtonsSignal signal)
     {
@@ -47,6 +64,12 @@ public class ButtonController : MonoBehaviour, IInitializer
     }
     public void RestartGame()
     {
+        YG.YandexGame.ResetSaveProgress();
+        YG.YandexGame.savesData.isAutoText = false;
+        YG.YandexGame.savesData.node = null;
+        YG.YandexGame.savesData.background = null;
+        YG.YandexGame.savesData.music = null;
+        YG.YandexGame.SaveProgress();
         SceneManager.LoadScene(0);
     }
     private void OnHidePathButtons(HidePathButtonsSignal signal)
@@ -65,19 +88,19 @@ public class ButtonController : MonoBehaviour, IInitializer
         switch (result.chr)
         {
             case Character.Andrey:
-                YandexGame.savesData.andreyCount += result.value;
+                YG.YandexGame.savesData.andreyCount += result.value;
                 break;
             case Character.Slave:
-                YandexGame.savesData.slaveCount += result.value;
+                YG.YandexGame.savesData.slaveCount += result.value;
                 break;
-            case Character.Teacher: 
-                YandexGame.savesData.teacherCount += result.value;
+            case Character.Teacher:
+                YG.YandexGame.savesData.teacherCount += result.value;
                 break;
             default:
                 Debug.LogWarning($"Character {result.chr} is not used to change the ending");
                 break;
         }
-        YandexGame.SaveProgress();
+        YG.YandexGame.SaveProgress();
         _bus.Invoke(new HidePathButtonsSignal());
     }
     private IEnumerator ToggleButtons(bool toggle)
@@ -93,6 +116,7 @@ public class ButtonController : MonoBehaviour, IInitializer
         if (_bus == null) return;
         _bus.Unsubscribe<ShowPathButtonsSignal>(OnShowPathButtons);
         _bus.Unsubscribe<HidePathButtonsSignal>(OnHidePathButtons);
-
+        _bus.Unsubscribe<BeforeShowAdSignal>(OnBeforeShowAdSignal);
+        _bus.Unsubscribe<AfterShowAdSignal>(OnAfterShowAdSignal);
     }
 }

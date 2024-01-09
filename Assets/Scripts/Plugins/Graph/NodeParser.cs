@@ -22,11 +22,21 @@ public class NodeParser : MonoBehaviour, IInitializer
         foreach (BaseNode node in _graph.nodes.Cast<BaseNode>())
         {
             node.Initialize();
-            if (node is StartNode temp)
+        }
+        if (YG.YandexGame.savesData.node == null)
+        {
+            foreach (BaseNode node in _graph.nodes.Cast<BaseNode>())
             {
-                _graph.current = node;
-                temp.Implement();
+                if (node is StartNode temp)
+                {
+                    _graph.current = node;
+                    temp.Implement();
+                }
             }
+        }
+        else
+        {
+            _graph.current = YG.YandexGame.savesData.node;
         }
         ParseNode(new NodeFinishedTextSignal());
     }
@@ -43,7 +53,13 @@ public class NodeParser : MonoBehaviour, IInitializer
                 temp.Implement();
                 break;
             case DialogueNode temp:
+                YG.YandexGame.savesData.node = temp;
+                if (temp.data.music != null)
+                {
+                    YG.YandexGame.savesData.music = temp.data.music;
+                }
                 _bus.Invoke(new NodeParsedDataSignal(temp.data));
+                YG.YandexGame.SaveProgress();
                 break;
             case ChoosingPathNode temp:
                 temp.StartParseCondition();
@@ -56,6 +72,10 @@ public class NodeParser : MonoBehaviour, IInitializer
                 _bus.Invoke(new ShowPathButtonsSignal(temp.path));
                 break;
             case ChangeSceneNode temp:
+                if (temp.scene != null)
+                {
+                    YG.YandexGame.savesData.background = temp.scene;
+                }
                 _bus.Invoke(new PlayerInteractSignal(false));
                 _bus.Invoke(new StartChangeSceneSignal(temp.scene));
                 break;

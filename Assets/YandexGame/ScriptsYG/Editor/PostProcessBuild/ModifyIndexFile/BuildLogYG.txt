@@ -1,2 +1,2 @@
-Build path: C:/Users/User/Desktop/Gamedev/MsgMe/Builds/test
-Build number: 152
+Build path: C:/Users/User/Desktop/Gamedev/MsgMe/Builds/v 1.0.5
+Build number: 153

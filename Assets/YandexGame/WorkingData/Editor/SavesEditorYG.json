@@ -1,10 +1,19 @@
 {
-    "idSave": 112,
+    "idSave": 7,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "andreyCount": 2,
-    "slaveCount": 6,
+    "andreyCount": 0,
+    "slaveCount": 0,
     "teacherCount": 0,
-    "isAutoText": false
+    "isAutoText": false,
+    "node": {
+        "instanceID": 10972
+    },
+    "music": {
+        "instanceID": 11476
+    },
+    "background": {
+        "instanceID": 0
+    }
 }

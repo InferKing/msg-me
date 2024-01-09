@@ -19,12 +19,14 @@ public class AutoText : MonoBehaviour, IInitializer
     }
     private void OnToggleAutoText(ToggleAutoTextSignal signal)
     {
+        Debug.Log("AutoText");
         YandexGame.savesData.isAutoText = signal.data;
         YandexGame.SaveProgress();
     }
     private void OnTypeTextFinished(TypeTextFinishedSignal signal)
     {
         if (!YandexGame.savesData.isAutoText) return;
+        if (_delay != null) StopCoroutine(_delay);
         _delay = StartCoroutine(Delay());
     }
     private void OnEndingGameSignal(EndingGameSignal signal)
