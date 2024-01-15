@@ -22,13 +22,15 @@ public class UIController : MonoBehaviour, IInitializer
         _bus.Subscribe<StartChangeSceneSignal>(OnStartChangeScene);
         _bus.Subscribe<FinishChangeSceneSignal>(OnFinishChangeScene);
         _bus.Subscribe<ToggleAutoTextSignal>(OnToggleAutoText);
-        _bus.Subscribe<EndingGameSignal>((signal) => _outro.SetBool(Constants.pathBtnAnimatorParameter, true));
+        _bus.Subscribe<EndingGameSignal>(OnEndingGame);
 
+    }
+    private void OnEndingGame(EndingGameSignal signal) {
+        _outro.SetBool(Constants.pathBtnAnimatorParameter, true);
     }
     private void OnNodeParsedData(NodeParsedDataSignal signal)
     {
         _tempData = signal.data;
-        // _characterImage.color = _tempData.sprite != null ? Color.white : Color.clear;
         if (_tempData.sprite == null && _characterImage.sprite != null)
         {
             StartCoroutine(FadeOut(_characterImage, 0.09f, true));
@@ -139,5 +141,6 @@ public class UIController : MonoBehaviour, IInitializer
         _bus.Unsubscribe<StartChangeSceneSignal>(OnStartChangeScene);
         _bus.Unsubscribe<FinishChangeSceneSignal>(OnFinishChangeScene);
         _bus.Unsubscribe<ToggleAutoTextSignal>(OnToggleAutoText);
+        _bus.Unsubscribe<EndingGameSignal>(OnEndingGame);
     }
 }
