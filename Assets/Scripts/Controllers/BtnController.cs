@@ -25,7 +25,6 @@ public class BtnController : MonoBehaviour, IInitializer
     public void AutoButton()
     {
         if (_bus == null || _locked) return;
-        Debug.Log("AutoButton");
         YG.YandexGame.savesData.isAutoText = !YG.YandexGame.savesData.isAutoText;
         _src.Play();
         _bus.Invoke(new ToggleAutoTextSignal(YG.YandexGame.savesData.isAutoText));
@@ -118,5 +117,7 @@ public class BtnController : MonoBehaviour, IInitializer
         _bus.Unsubscribe<HidePathButtonsSignal>(OnHidePathButtons);
         _bus.Unsubscribe<BeforeShowAdSignal>(OnBeforeShowAdSignal);
         _bus.Unsubscribe<AfterShowAdSignal>(OnAfterShowAdSignal);
+        _bus.Unsubscribe<StartChangeSceneSignal>(OnStartChangeScene);
+        _bus.Unsubscribe<FinishChangeSceneSignal>(OnFinishChangeScene);
     }
 }

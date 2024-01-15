@@ -27,7 +27,6 @@ public class EntryPoint : MonoBehaviour
             {
                 pair.Initialize();
             }
-            Debug.Log(YG.YandexGame.savesData.isAutoText);
             _bus.Invoke(new PlayerInteractSignal(!YG.YandexGame.savesData.isAutoText));
             YG.YandexGame.GameReadyAPI();
         });

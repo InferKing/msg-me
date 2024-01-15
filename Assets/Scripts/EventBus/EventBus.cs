@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 
 public class EventBus : IService
 {
     private Dictionary<string, List<CallbackWithPriority>> _signalCallbacks = new();
-    public EventBus() { }
     public void Subscribe<T>(Action<T> callback, int priority = 0)
     {
         string key = typeof(T).Name;
@@ -26,7 +24,6 @@ public class EventBus : IService
     public void Invoke<T>(T signal)
     {
         string key = typeof(T).Name;
-        Debug.Log(key);
         if (_signalCallbacks.ContainsKey(key))
         {
             foreach (var obj in _signalCallbacks[key])
@@ -51,7 +48,9 @@ public class EventBus : IService
         }
         else
         {
-            Debug.LogErrorFormat("Trying to unsubscribe for not existing key! {0} ", key);
+# if UNITY_EDITOR
+            UnityEngine.Debug.LogErrorFormat("Trying to unsubscribe for not existing key! {0} ", key);
+# endif
         }
     }
 }
